@@ -1,7 +1,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* استيراد الخط */
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
+
+/* تعميم الخط على كل شيء */
+* {
+  font-family: "Cairo", sans-serif !important;
+}
+
 body {
   background: #fff;
   color: #666666;
@@ -51,7 +58,7 @@ h6 {
 /*--------------------------------------------------------------
 # whats-icon
 --------------------------------------------------------------*/
-.whats-icon i {
+/* .whats-icon i {
   position: fixed;
   display: inline-block;
   width: 50px;
@@ -65,7 +72,7 @@ h6 {
   text-align: center;
   font-size: 26px;
   z-index: 100;
-}
+} */
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -398,7 +405,7 @@ header .logo-w img {
     position: fixed;
     top: 20px;
     z-index: 9999;
-    left: 20px;
+    right: 20px;
   }
   .sticked .mobile-nav-toggle {
     color: #000;
@@ -432,7 +439,6 @@ header .logo-w img {
 #hero {
   width: 100%;
   height: 100vh;
-  /*  background: #000; */
   overflow: hidden;
   position: relative;
 }
@@ -478,6 +484,7 @@ header .logo-w img {
   left: 95px;
   right: 50px;
   text-align: end;
+
 }
 /* .swiper-slide{
   width: 250px !important;
@@ -488,6 +495,7 @@ header .logo-w img {
   font-size: 48px;
   font-weight: 600;
   line-height: 100%;
+  text-align: left;
 }
 @media (max-width: 768px) {
   #hero h2 {
@@ -501,6 +509,7 @@ header .logo-w img {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
+  text-align: left;
 }
 
 #hero h2,
@@ -639,18 +648,65 @@ header .logo-w img {
   max-height: 100%;
   width: auto;
 }
+@media (max-width: 767px) {
+  .logo-section {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
 
+  .logo-section img {
+    display: inline-block;
+    height: 60px;
+    width: auto;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}
+.logo-section::-webkit-scrollbar {
+  height: 6px;
+}
+.logo-section::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+@media (max-width: 1024px) {
+  .logo-section {
+    display: flex;
+    flex-wrap: nowrap !important; /* يمنع النزول لسطر جديد */
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-section img {
+    flex: 0 0 auto;
+    height: 60px;
+    width: auto;
+    scroll-snap-align: start;
+    display: inline-block;
+  }
+}
 /* section Featured Event   */
-/* القسم الرئيسي */
 .featured-event {
   position: relative;
-  /* يمكن تحديد عرض ثابت هنا إذا رغبت، مثل: width: 1440px; */
+  max-width: 1300px;
+  margin: 0 auto;
   height: 900px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   background-color: white;
-  align-items: center; /* جميع العناصر بالافتراضي توضع في الوسط */
+  align-items: center;
   margin-top: 150px;
   box-sizing: border-box;
   padding: 20px;
@@ -666,7 +722,7 @@ header .logo-w img {
   letter-spacing: 0%;
   text-align: left;
   align-self: flex-start;
-  margin-left: 335px;
+  margin-left: 30px;
 }
 
 /* الوصف محاذى لليسار */
@@ -679,8 +735,8 @@ header .logo-w img {
   letter-spacing: 0%;
   text-align: left;
   align-self: flex-start;
-  margin-left: 335px;
   margin-top: -40px;
+  margin-left: 30px;
 }
 
 /* حاوية الصورة */
@@ -697,8 +753,9 @@ header .logo-w img {
   object-fit: cover;
   border-radius: 2px;
   display: block;
-  position: relative; /* لإنشاء سياق تكديس */
-  z-index: 1; /* تضع الصورة أمام المربع الكحلي */
+  position: relative;
+
+  z-index: 1;
 }
 
 /* المربع الكحلي خلف الصورة */
@@ -725,9 +782,107 @@ header .logo-w img {
   text-decoration: underline;
   cursor: pointer;
   align-self: flex-start;
-  margin-left: 335px;
+  margin-left: 30px;
   color: rgba(29, 52, 76, 1);
 }
+
+@media (max-width: 767px) {
+  .featured-event {
+    height: auto;
+    padding: 20px 15px;
+    margin-top: 80px;
+    gap: 20px;
+  }
+
+  .featured-event h2 {
+    width: 100%;
+    font-size: 24px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .featured-event p {
+    width: 100%;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-event img {
+    height: auto;
+    max-height: 300px;
+    border-radius: 2px;
+  }
+
+  .blue-box {
+    width: 60px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -40%);
+  }
+
+  .event-link {
+    font-size: 14px;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event {
+    height: auto;
+    padding: 30px 25px;
+    margin-top: 100px;
+    gap: 30px;
+  }
+
+  .featured-event h2 {
+    width: 100%;
+    font-size: 28px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .featured-event p {
+    width: 100%;
+    font-size: 15px;
+    margin-top: -25px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-event img {
+    height: auto;
+    max-height: 400px;
+    border-radius: 2px;
+  }
+
+  .blue-box {
+    width: 70px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -45%);
+  }
+
+  .event-link {
+    font-size: 15px;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
 /* End */
 
 /* Start: Hot Deals Section */
@@ -762,6 +917,15 @@ header .logo-w img {
   width: 690px;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .section-description {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: right; /* أو left حسب اللغة */
+  }
 }
 
 /* Card Wrapper */
@@ -946,6 +1110,47 @@ header .logo-w img {
 .newsletter-form button:hover {
   background-color: rgba(29, 52, 76, 0);
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newsletter {
+    width: 100%;
+    height: auto;
+    padding: 40px 30px;
+    margin: 40px auto;
+  }
+
+  .newsletter .overlay {
+    padding: 30px;
+    gap: 16px;
+  }
+
+  .newsletter-title {
+    font-size: 28px;
+  }
+
+  .newsletter-desc {
+    font-size: 15px;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    min-width: 60%;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+
+  .newsletter-form button {
+    width: auto;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+}
 
 /* End Newsletter Subscription Section */
 
@@ -1048,5 +1253,117 @@ header .logo-w img {
 @media (max-width: 768px) {
   #footer {
     margin-top: 10px;
+  }
+}
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.lang-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* حجم السهم */
+.lang-icon {
+  font-size: 12px;
+  margin-top: 2px;
+}
+body.rtl {
+  text-align: right;
+  font-family: "Cairo", sans-serif;
+}
+
+body.ltr {
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+ 
+
+/* ==== media ===== */
+/* mobile  */
+@media (max-width: 767px) {
+  /* خصائص مخصصة للموبايل */
+  body {
+    font-size: 14px;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 5px !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+  }
+
+  .hot-deals {
+    padding: 30px 20px;
+    margin-left: 0;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+  #hero h2,
+  #hero p {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+ /* ipad  */
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .hot-deals {
+    padding: 40px 40px;
+    margin-left: 0;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .logo-section {
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }

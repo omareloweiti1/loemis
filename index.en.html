@@ -39,27 +39,18 @@
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
-      <a href="index.html" class="logo-w"><img src="assets/img/logo-w.svg" alt="" class="img-fluid" /></a>
+      <a href="index.html" class="logo-w"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
+
       <nav id="navbar" class="navbar order-2 order-lg-1">
         <ul>
-          <li>
-            <a class="nav-link scrollto active" href="#hero">Home</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="#service">Service</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="#about">Whay us</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="#our-team">Our team</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="article-en.html">Articles</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto" href="#contact">Contact</a>
-          </li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#service">Service</a></li>
+          <li><a class="nav-link scrollto" href="#about">Why us</a></li>
+          <li><a class="nav-link scrollto" href="#our-team">Our team</a></li>
+          <li><a class="nav-link scrollto" href="article-en.html">Articles</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+          <!-- سوشال ميديا -->
           <div class="d-flex justify-content-center my-4">
             <div class="social-links">
               <a target="_blank" href="#" class="youtube"><img src="assets/img/socail/youtub.svg" alt="" /></a>
@@ -68,18 +59,32 @@
               <a target="_blank" href="#" class="facebook"><img src="assets/img/socail/face.svg" alt="" /></a>
             </div>
           </div>
-          <div class="d-lg-none d-flex justify-content-center">
-            <a style="background-color: rgb(16, 27, 75);" href="index.html"
-              class="lang py-2 m-0 d-inline-block scrollto">العربية</a>
+          <div class="d-lg-none d-flex justify-content-center mt-3">
+            <a href="contactus.html" class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+              Request a consultation
+            </a>
           </div>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-
-      <a href="index.html" class="lang d-lg-inline-flex d-none scrollto order-1 order-lg-2">العربية</a>
+      <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
+        <!-- زر Request -->
+        <a href="contactus.html" class="btn btn-outline-dark">
+          Request a consultation
+        </a>
+        <!-- قائمة اللغة -->
+        <div class="dropdown language-switcher">
+          <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
+          </button>
+          <ul class="dropdown-menu lang-dropdown">
+            <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
+            <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
-  <!-- End Header -->
 
   <!-- ======= hero Section ======= -->
   <section id="hero">
@@ -144,7 +149,6 @@
   <!-- End section Corporate logo -->
 
   <!-- ======= Featured Event Section ======= -->
-  <!-- قسم الحدث المميز -->
   <section class="featured-event">
     <h2>Featured Event of the Month</h2>
     <p>Our Visit to Al Habtoor Group's Developer Event</p>
@@ -232,7 +236,8 @@
     <div class="overlay">
       <h2 class="newsletter-title">Latest news and updates</h2>
       <p class="newsletter-desc">
-        Subscribe to our newsletter and stay up to date with all the latest events and news coming directly to your inbox.
+        Subscribe to our newsletter and stay up to date with all the latest events and news coming directly to your
+        inbox.
       </p>
       <form class="newsletter-form">
         <input type="email" placeholder="Your Email Address" required />
@@ -267,7 +272,42 @@
     </div>
   </footer>
   <!-- End Footer -->
-   <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+  <script>
+    // تفعيل القائمة عند الضغط
+    const langToggle = document.querySelector(".lang-toggle");
+    const langDropdown = document.querySelector(".lang-dropdown");
+
+    langToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const isVisible = langDropdown.style.display === "block";
+      langDropdown.style.display = isVisible ? "none" : "block";
+    });
+
+    // إغلاق القائمة إذا ضغطت برّا
+    document.addEventListener("click", function (e) {
+      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.style.display = "none";
+      }
+    });
+
+    function switchLang(lang) {
+      if (lang === 'ar') {
+        document.documentElement.setAttribute("dir", "rtl");
+        document.body.classList.add("rtl");
+        document.body.classList.remove("ltr");
+      } else {
+        document.documentElement.setAttribute("dir", "ltr");
+        document.body.classList.add("ltr");
+        document.body.classList.remove("rtl");
+      }
+
+      // إغلاق القائمة بعد اختيار اللغة
+      langDropdown.style.display = "none";
+    }
+  </script>
 </body>
 
 </html>

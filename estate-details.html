@@ -32,6 +32,13 @@
 
 </head>
 
+
+<!-- تدوير السهم عند الفتح -->
+<!-- .lang-toggle.open .lang-icon {
+    transform: rotate(180deg);
+  } -->
+
+
 <body class="home">
     <img src="assets/img/pattern2.png" class="patern2" alt="" />
 
@@ -39,27 +46,18 @@
     <header id="header" class="header fixed-top" data-scrollto-offset="0">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
-            <a href="index.html" class="logo-w"><img src="assets/img/logo-w.svg" alt="" class="img-fluid" /></a>
+            <a href="index.html" class="logo-w"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
+
             <nav id="navbar" class="navbar order-2 order-lg-1">
                 <ul>
-                    <li>
-                        <a class="nav-link scrollto active" href="#hero">Home</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto" href="#service">Service</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto" href="#about">Whay us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto" href="#our-team">Our team</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto" href="article-en.html">Articles</a>
-                    </li>
-                    <li>
-                        <a class="nav-link scrollto" href="#contact">Contact</a>
-                    </li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#service">Service</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Why us</a></li>
+                    <li><a class="nav-link scrollto" href="#our-team">Our team</a></li>
+                    <li><a class="nav-link scrollto" href="article-en.html">Articles</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+                    <!-- سوشال ميديا -->
                     <div class="d-flex justify-content-center my-4">
                         <div class="social-links">
                             <a target="_blank" href="#" class="youtube"><img src="assets/img/socail/youtub.svg"
@@ -72,41 +70,213 @@
                                     alt="" /></a>
                         </div>
                     </div>
-                    <div class="d-lg-none d-flex justify-content-center">
-                        <a style="background-color: rgb(16, 27, 75);" href="index.html"
-                            class="lang py-2 m-0 d-inline-block scrollto">العربية</a>
+                    <div class="d-lg-none d-flex justify-content-center mt-3">
+                        <a href="contactus.html"
+                            class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+                            Request a consultation
+                        </a>
                     </div>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
-
-            <a href="index.html" class="lang d-lg-inline-flex d-none scrollto order-1 order-lg-2">العربية</a>
-        </div>
+            <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
+                <!-- زر Request -->
+                <a href="contactus.html" class="btn btn-outline-dark">
+                    Request a consultation
+                </a>
+                <!-- قائمة اللغة -->
+                <div class="dropdown language-switcher">
+                    <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
+                    </button>
+                    <ul class="dropdown-menu lang-dropdown">
+                        <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+                    </ul>
+                </div>
+            </div>
     </header>
+
     <!-- End Header -->
+    <br>
+    <br>
+    <br>
+    <br>
 
     <!-- ======= hero Section ======= -->
     <section class="hero-section">
         <div class="hero-content">
-          <div class="text-area" data-aos="fade-right">
-            <h2>Our Collaborations with<br>Industry Giants</h2>
-            <p>
-              Office ipsum you must be muted. Deck kpis unlock giant view beforehand define price.
-            </p>
-            <a href="#contact" class="cta-button">Contact Us</a>
-          </div>
-    
-          <div class="phone-area" data-aos="fade-left">
-            <div class="iphone-frame">
-              <video src="assets/img/110923-689949643.mp4" autoplay muted loop playsinline></video>
+            <div class="text-area" data-aos="fade-right">
+                <h2>Our Collaborations with <br>Industry Giants</h2>
+                <p>
+                    Building strong connections with the region’s most influential developers
+                </p>
+                <a href="#contact" class="cta-button">Contact Us</a>
             </div>
-          </div>
-        </div>
-      </section>
-    
-     
 
+            <div class="phone-area" data-aos="fade-left">
+                <div class="iphone-frame">
+                    <div class="video-wrapper">
+                        <video id="myVideo" src="assets/img/110923-689949643.mp4" autoplay muted loop
+                            playsinline></video>
+                        <div class="pause-overlay" id="pauseOverlay">
+                            <img src="assets/img/svgexport-15 (43) 4 (1).png" alt="Pause Icon" />
+                        </div>
+                        <img class="notch-overlay" src="assets/img/ip14.png" alt="notch" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- End Hero Section -->
+
+
+
+    <!-- experience-section -->
+    <!-- <section class="experience-section-wrapper">
+        <div class="content-area">
+          <div class="text-area">
+            <h2 class="section-title">An Exclusive Experience with Al Habtoor Group</h2>
+            <p class="section-description">
+              We had the privilege of attending an exclusive event hosted by the renowned Al Habtoor Group — a name that has become
+              synonymous with excellence, innovation, and luxury across the UAE and beyond. As one of the most influential developers in the
+              region, Al Habtoor Group continues to shape Dubai’s skyline with visionary projects that combine architectural brilliance with
+              unmatched quality.
+            </p>
+            <div class="dots-container" id="dots"></div>
+          </div>
+          <div class="slider-container" id="slider"></div>
+        </div>
+      
+        <div id="thumbnailScroll" style="display: none;">
+          <img src="assets/img/about/1.jpg" alt="">
+          <img src="assets/img/about/2.png" alt="">
+          <img src="assets/img/about/3.png" alt="">
+          <img src="assets/img/about/4.png" alt="">
+        </div>
+      </section> -->
+    <section class="experience-slider-section">
+        <div class="custom-container">
+            <div class="left-content">
+                <h2 class="title">An Exclusive Experience with Al Habtoor Group</h2>
+                <p class="description">
+                    We had the privilege of attending an exclusive event hosted by the renowned Al Habtoor Group — a
+                    name that has become synonymous with excellence, innovation, and luxury across the UAE and beyond.
+                    As one of the most influential developers in the region, Al Habtoor Group continues to shape Dubai’s
+                    skyline with visionary projects that combine architectural brilliance with unmatched quality.
+                </p>
+                <div class="dots" id="dots"></div>
+            </div>
+            <div class="right-slider" id="slider"></div>
+        </div>
+
+        <!-- صور مصدر -->
+        <div id="imageSource" style="display: none;">
+            <img src="assets/img/mobile/1.jpg" alt="">
+            <img src="assets/img/mobile/2.png" alt="">
+            <img src="assets/img/mobile/4.png" alt="">
+            <img src="assets/img/mobile/downlo2.jpeg" alt="">
+            <img src="assets/img/mobile/download.jpg" alt="">
+            <img src="assets/img/mobile/download3.jpeg" alt="">
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- experience-section -->
+
+
+    <!-- ======= Featured Event Section ======= -->
+    <section class="featured-event">
+        <h2>A Proud Moment: Engaging with Al Habtoor Group – A True Real Estate Powerhouse</h2>
+        <p>Our team had the honor of attending an exclusive developer event hosted by the Al Habtoor Group – a leading
+            name in the UAE’s real estate and hospitality industry.</p>
+        <div class="image-wrapper">
+            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <div class="blue-box"></div>
+        </div>
+        <!-- <a href="#" class="event-link">View Event Details</a> -->
+    </section>
+
+    <!-- End Featured Event Section -->
+
+    <!-- ======= Featured Event Section ======= -->
+    <section class="featured-event">
+        <h2>About the Developer: Al Habtoor Group</h2>
+        <p>The Al Habtoor Group, established in 1970, has evolved into one of the UAE’s most respected conglomerates.
+            With ventures in hospitality, automotive, leasing, real estate, education, and publishing, its presence is
+            felt not only across Dubai but in global cities like London, Vienna, and Budapest. The Group’s real estate
+            division includes iconic developments such as the Al Habtoor Tower and The Residences, Al Habtoor Grand –
+            hallmarks of luxury living.</p>
+        <div class="image-wrapper">
+            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <div class="blue-box"></div>
+        </div>
+    </section>
+
+    <!-- End Featured Event Section -->
+
+
+    <!-- ======= Featured Event Section ======= -->
+    <section class="featured-event">
+        <h2>Inside the Event: A Gathering of Visionaries</h2>
+        <p>Our visit to the Al Habtoor Group’s developer event was a remarkable experience that gave us insight into the
+            future of premium real estate in Dubai. The event brought together top real estate professionals,
+            developers, and partners to exchange ideas, showcase upcoming projects, and explore potential
+            collaborations collaborations.</p>
+        <div class="image-wrapper">
+            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <div class="blue-box"></div>
+        </div>
+        <!-- <a href="#" class="event-link">View Event Details</a> -->
+    </section>
+
+    <!-- End Featured Event Section -->
+
+
+    <!-- ======= Featured Event Section ======= -->
+    <section class="featured-event">
+        <h2>What We Gained from the Experience</h2>
+        <ul class="gain-list">
+            <li>Gained insight into upcoming luxury developments like Al Habtoor Tower</li>
+            <li>Explored investment opportunities within Jumeirah and Dubai Land</li>
+            <li>
+                Strengthened ties with key figures in the UAE real estate sector
+            </li>
+            <li>
+                Reinforced our commitment to quality, innovation, and strong partnerships
+            </li>
+        </ul>
+        <div class="image-wrapper">
+            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <div class="blue-box"></div>
+        </div>
+        <!-- <a href="#" class="event-link">View Event Details</a> -->
+    </section>
+
+    <!-- End Featured Event Section -->
+
+
+
+    <!-- ======= Featured Event Section ======= -->
+    <section class="featured-event">
+        <h2>Partnering with the Best to Deliver the Best</h2>
+        <p>By aligning with leading developers like Al Habtoor Group, we continue to position ourselves at the forefront
+            of Dubai’s thriving real estate landscape. Our goal is to provide our clients with access to the most
+            prestigious projects in the market, backed by strong relationships and industry trust.</p>
+        <div class="image-wrappers">
+            <img src="assets/img/Logo_Netflix.svg" alt="Event Image" />
+        </div>
+        <!-- <a href="#" class="event-link">View Event Details</a> -->
+    </section>
+
+    <!-- End Featured Event Section -->
+
 
 
     <!-- ======= Featured Event Section ======= -->
@@ -207,16 +377,120 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-     <!-- AOS -->
-     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-     <script>
-       AOS.init({
-         duration: 1000,
-         once: true,
-         offset: 120,
-       });
-     </script>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120,
+        });
+    </script>
+    <script>
+        // الحصول على عناصر الفيديو والـOverlay
+        const video = document.getElementById("myVideo");
+        const pauseOverlay = document.getElementById("pauseOverlay");
+
+        // إضافة مستمع حدث (click) على الفيديو
+        video.addEventListener("click", function () {
+            if (!video.paused) {
+                // في حال الفيديو يعمل، نوقفه ونظهر الـOverlay
+                video.pause();
+                pauseOverlay.style.display = "block";
+            } else {
+                // في حال الفيديو متوقف، نعيد تشغيله ونخفي الـOverlay
+                video.play();
+                pauseOverlay.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const imgTags = document.querySelectorAll("#imageSource img");
+            const imageList = Array.from(imgTags).map(img => img.src);
+
+            let currentIndex = 0;
+            const slider = document.getElementById("slider");
+            const dots = document.getElementById("dots");
+
+            let isMobile = window.innerWidth <= 767;
+
+            function renderSlides() {
+                slider.innerHTML = '';
+                const currentImg = imageList[currentIndex];
+                const nextImg = imageList[(currentIndex + 1) % imageList.length];
+
+                if (isMobile) {
+                    const mobileSlide = document.createElement('div');
+                    mobileSlide.className = 'slide big';
+                    mobileSlide.style.backgroundImage = `url(${currentImg})`;
+                    slider.appendChild(mobileSlide);
+                } else {
+                    const slide1 = document.createElement('div');
+                    slide1.className = 'slide big';
+                    slide1.style.backgroundImage = `url(${currentImg})`;
+
+                    const slide2 = document.createElement('div');
+                    slide2.className = 'slide small';
+                    slide2.style.backgroundImage = `url(${nextImg})`;
+
+                    slider.appendChild(slide1);
+                    slider.appendChild(slide2);
+                }
+
+                renderDots();
+            }
+
+            function renderDots() {
+                dots.innerHTML = '';
+                imageList.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot ' + (i === currentIndex ? 'active' : 'inactive');
+                    dots.appendChild(dot);
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % imageList.length;
+                renderSlides();
+            }
+
+            renderSlides();
+
+            window.addEventListener('resize', () => {
+                const newIsMobile = window.innerWidth <= 767;
+                if (newIsMobile !== isMobile) {
+                    isMobile = newIsMobile;
+                    renderSlides();
+                }
+            });
+
+            setInterval(nextSlide, 8000);
+        });
+
+
+
+    </script>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'ar') {
+                document.documentElement.setAttribute("dir", "rtl");
+                document.documentElement.lang = "ar";
+                document.body.classList.add("rtl");
+                document.body.classList.remove("ltr");
+            } else {
+                document.documentElement.setAttribute("dir", "ltr");
+                document.documentElement.lang = "en";
+                document.body.classList.add("ltr");
+                document.body.classList.remove("rtl");
+            }
+        }
+    </script>
+
 </body>
 
 </html>

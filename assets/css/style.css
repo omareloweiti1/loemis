@@ -1,7 +1,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* استيراد الخط */
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
+
+/* تعميم الخط على كل شيء */
+* {
+  font-family: "Cairo", sans-serif !important;
+}
+
 body {
   background: #fff;
   color: #666666;
@@ -51,7 +58,7 @@ h6 {
 /*--------------------------------------------------------------
 # whats-icon
 --------------------------------------------------------------*/
-.whats-icon i {
+/* .whats-icon i {
   position: fixed;
   display: inline-block;
   width: 50px;
@@ -65,7 +72,7 @@ h6 {
   text-align: center;
   font-size: 26px;
   z-index: 100;
-}
+} */
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -488,6 +495,7 @@ header .logo-w img {
   font-size: 48px;
   font-weight: 600;
   line-height: 100%;
+  text-align: left;
 }
 @media (max-width: 768px) {
   #hero h2 {
@@ -501,6 +509,7 @@ header .logo-w img {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
+  text-align: left;
 }
 
 #hero h2,
@@ -641,16 +650,16 @@ header .logo-w img {
 }
 
 /* section Featured Event   */
-/* القسم الرئيسي */
 .featured-event {
   position: relative;
-  /* يمكن تحديد عرض ثابت هنا إذا رغبت، مثل: width: 1440px; */
+  max-width: 1300px;
+  margin: 0 auto;
   height: 900px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   background-color: white;
-  align-items: center; /* جميع العناصر بالافتراضي توضع في الوسط */
+  align-items: center;
   margin-top: 150px;
   box-sizing: border-box;
   padding: 20px;
@@ -666,7 +675,7 @@ header .logo-w img {
   letter-spacing: 0%;
   text-align: left;
   align-self: flex-start;
-  margin-left: 335px;
+  margin-left: 30px;
 }
 
 /* الوصف محاذى لليسار */
@@ -679,8 +688,8 @@ header .logo-w img {
   letter-spacing: 0%;
   text-align: left;
   align-self: flex-start;
-  margin-left: 335px;
   margin-top: -40px;
+  margin-left: 30px;
 }
 
 /* حاوية الصورة */
@@ -697,8 +706,8 @@ header .logo-w img {
   object-fit: cover;
   border-radius: 2px;
   display: block;
-  position: relative; /* لإنشاء سياق تكديس */
-  z-index: 1; /* تضع الصورة أمام المربع الكحلي */
+  position: relative;
+  z-index: 1;
 }
 
 /* المربع الكحلي خلف الصورة */
@@ -725,7 +734,7 @@ header .logo-w img {
   text-decoration: underline;
   cursor: pointer;
   align-self: flex-start;
-  margin-left: 335px;
+  margin-left: 30px;
   color: rgba(29, 52, 76, 1);
 }
 /* End */
@@ -849,6 +858,53 @@ header .logo-w img {
   padding: 5px 10px;
   margin-top: -10px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.rtl .hot-deals {
+    margin-left: 0;
+    margin-right: 0; /* أو 100px لو بدك تحركه عن اليمين */
+    padding: 60px 120px;
+  }
+  
+
+  body.rtl .section-title,
+  body.rtl .section-description {
+    text-align: right;
+    width: 100%;
+  }
+
+  body.rtl .section-title {
+    font-size: 28px;
+  }
+
+  body.rtl .section-description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  body.rtl .cards-wrapper {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  body.rtl .card {
+    width: 45%;
+    height: auto;
+  }
+
+  body.rtl .card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  body.rtl .card-title,
+  body.rtl .card-desc,
+  body.rtl .card-date,
+  body.rtl .card-link {
+    text-align: right;
+    width: 100%;
+  }
+}
 
 /* End: Hot Deals Section   */
 
@@ -922,7 +978,6 @@ header .logo-w img {
   border-bottom-left-radius: 5px;
   border-right: none; /* دمج بصري مع الزر */
   outline: none;
-  margin-left: -60px;
 }
 
 .newsletter-form input::placeholder {
@@ -942,7 +997,6 @@ header .logo-w img {
   cursor: pointer;
   transition: background 0.3s ease;
   outline: none;
-  margin-left: 75px;
 }
 
 .newsletter-form button:hover {
@@ -1052,3 +1106,484 @@ header .logo-w img {
     margin-top: 10px;
   }
 }
+
+.lang-toggle {
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.lang-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* حجم السهم */
+.lang-icon {
+  font-size: 12px;
+  margin-top: 2px;
+}
+body.rtl {
+  text-align: right;
+  font-family: "Cairo", sans-serif;
+}
+
+body.ltr {
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+
+
+.newsletter-form input[type="email"] {
+  width: 374px;
+  height: 48px;
+  padding-left: 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 16px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-left: none; /* دمج بصري مع الزر */
+  outline: none;
+}
+.newsletter-form button {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none; /* يندمج مع الانبوت */
+  border-right: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+.hot-deals {
+  padding: 60px 120px;
+  background-color: white;
+}
+
+
+/*-------------------------------------
+--------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+---------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+  display: none;
+}
+@media (max-width: 1279px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* بدلاً من right */
+    width: calc(100% - 70px);
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+  }
+  
+  .navbar ul {
+    position: absolute;
+    inset: 0;
+    padding: 10px 0;
+    margin: 0;
+    background: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover > a {
+    color: var(--bgSecColor);
+    font-weight: 700;
+  }
+  .navbar .dropdown ul,
+  .navbar .dropdown .dropdown ul {
+    position: static;
+    display: none;
+    padding: 10px 0;
+    margin: 10px 20px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid rgba(var(--color-secondary-light-rgb), 0.3);
+  }
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
+    display: block;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    top: 20px;
+    z-index: 9999;
+    left: 20px;
+    right: auto;
+  }
+  .sticked .mobile-nav-toggle {
+    color: #000;
+  }
+  .mobile-nav-toggle.bi-x {
+    color: var(--secondery-color);
+  }
+  .mobile-nav-active {
+    overflow: hidden;
+    z-index: 9995;
+    position: relative;
+  }
+  .mobile-nav-active .navbar {
+    left: 0;
+  }
+  .mobile-nav-active .navbar:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: #ffffff68;
+    z-index: 9996;
+  }
+}
+@media (max-width: 1279px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: calc(100% - 70px);
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+  }
+
+  .mobile-nav-active .navbar {
+    left: 0;
+  }
+
+  .mobile-nav-toggle {
+    left: 20px;
+    right: auto;
+  }
+}
+
+
+@media (max-width: 767px)  {
+  .logo-section {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-section img {
+    display: inline-block;
+    height: 60px;
+    width: auto;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}
+.logo-section::-webkit-scrollbar {
+  height: 6px;
+}
+.logo-section::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+@media (max-width: 1024px) {
+  .logo-section {
+    display: flex;
+    flex-wrap: nowrap !important; /* يمنع النزول لسطر جديد */
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-section img {
+    flex: 0 0 auto;
+    height: 60px;
+    width: auto;
+    scroll-snap-align: start;
+    display: inline-block;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .featured-event {
+    height: auto;
+    padding: 20px 15px;
+    margin-top: 80px;
+    gap: 20px;
+  }
+
+  .featured-event h2 {
+    width: 100%;
+    font-size: 24px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .featured-event p {
+    width: 100%;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-event img {
+    height: auto;
+    max-height: 300px;
+    border-radius: 2px;
+  }
+
+  .blue-box {
+    width: 60px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -40%);
+  }
+
+  .event-link {
+    font-size: 14px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event {
+    height: auto;
+    padding: 30px 25px;
+    margin-top: 100px;
+    gap: 30px;
+  }
+
+  .featured-event h2 {
+    width: 100%;
+    font-size: 28px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .featured-event p {
+    width: 100%;
+    font-size: 15px;
+    margin-top: -25px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-event img {
+    height: auto;
+    max-height: 400px;
+    border-radius: 2px;
+  }
+
+  .blue-box {
+    width: 70px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -45%);
+  }
+
+  .event-link {
+    font-size: 15px;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-description {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: right; /* أو left حسب اللغة */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newsletter {
+    width: 100%;
+    height: auto;
+    padding: 40px 30px;
+    margin: 40px auto;
+  }
+
+  .newsletter .overlay {
+    padding: 30px;
+    gap: 16px;
+  }
+
+  .newsletter-title {
+    font-size: 28px;
+  }
+
+  .newsletter-desc {
+    font-size: 15px;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .newsletter-form input[type="email"] {
+    flex: 1;
+    min-width: 60%;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+
+  .newsletter-form button {
+    width: auto;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+}
+
+
+/* ==== media ===== */
+/* mobile  */
+@media (max-width: 767px) {
+  /* خصائص مخصصة للموبايل */
+  body {
+    font-size: 14px;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 5px !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+  }
+
+  .hot-deals {
+    padding: 30px 20px;
+    margin-left: 0;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+  #hero h2,
+  #hero p {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+ /* ipad  */
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .hot-deals {
+    padding: 40px 40px;
+    margin-left: 0;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .logo-section {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+/* @media (max-width: 767px) {
+  section:not(#hero):not(#footer):not(#header),
+  .hot-deals,
+  .featured-event,
+  .logo-section,
+  .newsletter {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+} */
+
