@@ -39,44 +39,65 @@
     <img src="assets/img/pattern2.png" class="patern2" alt="" />
 
     <!-- ======= Header ======= -->
+    <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top" data-scrollto-offset="0">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
-            <a href="index.html" class="logo-w"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
+            <!-- Logo -->
+            <a href="index.en.html" class="logo">
+                <img src="assets/img/logo.png" alt="" class="img-fluid" />
+            </a>
+            <a href="index.en.html" class="logo-w">
+                <img src="assets/img/logo.png" alt="" class="img-fluid" />
+            </a>
 
+            <!-- Navbar -->
             <nav id="navbar" class="navbar order-2 order-lg-1">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="index.en.html">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#service">Service</a></li>
                     <li><a class="nav-link scrollto" href="#about">Why us</a></li>
                     <li><a class="nav-link scrollto" href="#our-team">Our team</a></li>
-                    <li><a class="nav-link scrollto" href="article-en.html">Articles</a></li>
-                    <li><a class="nav-link scrollto" href="contactus.html">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="#article">Articles</a></li>
+                    <li><a class="nav-link scrollto" href="contactus.html">Contact us</a></li>
 
-                    <!-- social-link-->
+                    <!-- Social Media -->
                     <div class="d-flex justify-content-center my-4">
                         <div class="social-links">
                             <a target="_blank" href="#" class="youtube"><img src="assets/img/socail/youtub.svg"
                                     alt="" /></a>
                             <a target="_blank" href="#" class="twitter"><img src="assets/img/socail/linkedin.svg"
                                     alt="" /></a>
-                            <a target="_blank" href="" class="instagram"><img src="assets/img/socail/insta.svg"
+                            <a target="_blank" href="#" class="instagram"><img src="assets/img/socail/insta.svg"
                                     alt="" /></a>
                             <a target="_blank" href="#" class="facebook"><img src="assets/img/socail/face.svg"
                                     alt="" /></a>
                         </div>
                     </div>
-                    <div class="d-lg-none d-flex justify-content-center mt-3">
-                        <a href="contactus.html"
-                            class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+
+                    <!-- Mobile Only: Request + Language -->
+                    <li class="d-lg-none text-center mt-3">
+                        <a href="contactus.html" class="btn btn-outline-dark mb-2 d-inline-block">
                             Request a consultation
                         </a>
-                    </div>
+                    </li>
+                    <li class="d-lg-none text-center mt-3">
+                        <div class="dropdown language-switcher d-inline-block">
+                            <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
+                            </button>
+                            <ul class="dropdown-menu lang-dropdown">
+                                <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
+
+            <!-- Desktop Only: Request + Language -->
             <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
-                <!-- Request -->
                 <a href="contactus.html" class="btn btn-outline-dark">
                     Request a consultation
                 </a>
@@ -90,7 +111,9 @@
                     </ul>
                 </div>
             </div>
+        </div>
     </header>
+
 
     <!-- End Header -->
     <br>

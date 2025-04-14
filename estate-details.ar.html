@@ -3,17 +3,21 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LOEMIS</title>
-  <meta
-    content="سدكس احدى الشركات المتخصصة في مجال النظافة والصيانة والتي تقدم خدماتها بالمجتمعات السكنية والتجارية نظافة المدن وصيانة المباني والمصانع"
-    name="description" />
-  <meta content="نظافة , صيانة, تعقييم, صيانة منازل, تنظيف حدائق, تصليح, " name="keywords" />
+  <title>News Details | Lomis Real Estate</title>
+
+  <meta name="description"
+    content="Explore detailed insights into the latest updates from Lomis Real Estate. Discover new projects, offers, and real estate development news." />
+
+  <meta name="keywords"
+    content="Lomis, Real Estate, News Detail, Property Updates, Project Info, Real Estate Development, Investment, Apartments, Villas, Offers, Maintenance" />
+
   <!-- Favicons -->
   <link href="assets/img/logo.png" rel="icon" />
   <link href="assets/img/logo.png" rel="apple-touch-icon" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
@@ -22,14 +26,13 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS Files -->
   <link href="assets/css/style.en.css" rel="stylesheet" />
   <link href="assets/css/estate-details.css" rel="stylesheet" />
-  <link href="assets/css/estate-details.ar.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 </head>
 
@@ -37,40 +40,58 @@
   <img src="assets/img/pattern2.png" class="patern2" alt="" />
 
   <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
-      <a href="index.html" class="logo-w"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="" class="img-fluid" />
+      </a>
+      <a href="index.html" class="logo-w">
+        <img src="assets/img/logo.png" alt="" class="img-fluid" />
+      </a>
 
+      <!-- Navbar -->
       <nav id="navbar" class="navbar order-2 order-lg-1">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">الرئيسية</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">الرئيسية</a></li>
           <li><a class="nav-link scrollto" href="#service">خدماتنا</a></li>
           <li><a class="nav-link scrollto" href="#about">لماذا نحن</a></li>
           <li><a class="nav-link scrollto" href="#our-team">فريقنا</a></li>
-          <li><a class="nav-link scrollto" href="#">المقالات</a></li>
+          <li><a class="nav-link scrollto" href="article-en.html">المقالات</a></li>
           <li><a class="nav-link scrollto" href="contactus.ar.html">تواصل معنا</a></li>
 
-          <!-- social-links-->
-          <div class="d-flex justify-content-center my-4">
-            <div class="social-links">
+          <!-- social-links -->
+          <div class="d-flex justify-content-center my-4 row">
+            <div class="social-links row">
               <a target="_blank" href="#" class="youtube"><img src="assets/img/socail/youtub.svg" alt="" /></a>
               <a target="_blank" href="#" class="twitter"><img src="assets/img/socail/linkedin.svg" alt="" /></a>
               <a target="_blank" href="" class="instagram"><img src="assets/img/socail/insta.svg" alt="" /></a>
               <a target="_blank" href="#" class="facebook"><img src="assets/img/socail/face.svg" alt="" /></a>
             </div>
           </div>
-          <div class="d-lg-none d-flex justify-content-center mt-3">
-            <a href="contactus.ar.html"
-              class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+
+          <!-- mobile change lang & req-->
+          <li class="d-lg-none text-center mt-3">
+            <a href="contactus.ar.html" class="btn btn-outline-dark mb-2 d-inline-block">
               طلب استشارة
             </a>
-          </div>
+          </li>
+          <li class="d-lg-none text-center mt-3">
+            <div class="dropdown language-switcher d-inline-block">
+              <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
+              </button>
+              <ul class="dropdown-menu lang-dropdown">
+                <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
-        <!--  Request -->
         <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
