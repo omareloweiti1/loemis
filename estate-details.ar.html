@@ -54,7 +54,7 @@
       <!-- Navbar -->
       <nav id="navbar" class="navbar order-2 order-lg-1">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">الرئيسية</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">الرئيسية</a></li>
           <li><a class="nav-link scrollto" href="#service">خدماتنا</a></li>
           <li><a class="nav-link scrollto" href="#about">لماذا نحن</a></li>
           <li><a class="nav-link scrollto" href="#our-team">فريقنا</a></li>
@@ -496,16 +496,57 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <!-- Swiper Slider Initialization: Creates scrollable carousel for .hot-deals-swiper section -->
   <script>
-    const swiper = new Swiper(".hot-deals-swiper", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      }
+    const langToggles = document.querySelectorAll(".lang-toggle");
+    const langDropdowns = document.querySelectorAll(".lang-dropdown");
+
+    // Add toggle event to each language toggle button
+    langToggles.forEach((toggle, index) => {
+        const dropdown = langDropdowns[index];
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            const isVisible = dropdown.style.display === "block";
+            dropdown.style.display = isVisible ? "none" : "block";
+        });
+
+        // Hide dropdown on clicking outside
+        document.addEventListener("click", function (e) {
+            if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
     });
-  </script>
+
+    function switchLang(lang) {
+        const currentUrl = window.location.href;
+        const url = new URL(currentUrl);
+        const pathname = url.pathname;
+
+        let newPath;
+
+        if (lang === 'ar') {
+            document.documentElement.setAttribute("dir", "rtl");
+            document.body.classList.add("rtl");
+            document.body.classList.remove("ltr");
+
+            newPath = pathname
+                .replace("index.en.html", "index.html")
+                .replace("estate-details.html", "estate-details.ar.html")
+                .replace("contactus.html", "contactus.ar.html");
+        } else {
+            document.documentElement.setAttribute("dir", "ltr");
+            document.body.classList.add("ltr");
+            document.body.classList.remove("rtl");
+
+            newPath = pathname
+                .replace("index.html", "index.en.html")
+                .replace("estate-details.ar.html", "estate-details.html")
+                .replace("contactus.ar.html", "contactus.html");
+        }
+
+        window.location.href = newPath;
+    }
+
+</script>
 
 
 </body>

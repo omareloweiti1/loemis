@@ -53,7 +53,7 @@
             <!-- Navbar -->
             <nav id="navbar" class="navbar order-2 order-lg-1">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="index.en.html">Home</a></li>
                     <li><a class="nav-link scrollto" href="#service">Service</a></li>
                     <li><a class="nav-link scrollto" href="#about">Why us</a></li>
                     <li><a class="nav-link scrollto" href="#our-team">Our team</a></li>
@@ -564,19 +564,24 @@
     </script>
     <!-- Language Toggle Script: Dropdown behavior and page language switching -->
     <script>
-        const langToggle = document.querySelector(".lang-toggle");
-        const langDropdown = document.querySelector(".lang-dropdown");
+        const langToggles = document.querySelectorAll(".lang-toggle");
+        const langDropdowns = document.querySelectorAll(".lang-dropdown");
 
-        langToggle.addEventListener("click", function (e) {
-            e.preventDefault();
-            const isVisible = langDropdown.style.display === "block";
-            langDropdown.style.display = isVisible ? "none" : "block";
-        });
+        // Add toggle event to each language toggle button
+        langToggles.forEach((toggle, index) => {
+            const dropdown = langDropdowns[index];
+            toggle.addEventListener("click", function (e) {
+                e.preventDefault();
+                const isVisible = dropdown.style.display === "block";
+                dropdown.style.display = isVisible ? "none" : "block";
+            });
 
-        document.addEventListener("click", function (e) {
-            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-                langDropdown.style.display = "none";
-            }
+            // Hide dropdown on clicking outside
+            document.addEventListener("click", function (e) {
+                if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.style.display = "none";
+                }
+            });
         });
 
         function switchLang(lang) {
@@ -595,7 +600,6 @@
                     .replace("index.en.html", "index.html")
                     .replace("estate-details.html", "estate-details.ar.html")
                     .replace("contactus.html", "contactus.ar.html");
-
             } else {
                 document.documentElement.setAttribute("dir", "ltr");
                 document.body.classList.add("ltr");
@@ -608,9 +612,8 @@
             }
 
             window.location.href = newPath;
-
-            langDropdown.style.display = "none";
         }
+
     </script>
 
 </body>
