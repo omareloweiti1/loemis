@@ -59,7 +59,8 @@
             </div>
           </div>
           <div class="d-lg-none d-flex justify-content-center mt-3">
-            <a href="contactus.ar.html" class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+            <a href="contactus.ar.html"
+              class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
               طلب استشارة
             </a>
           </div>
@@ -67,11 +68,10 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
-        <!-- زر Request -->
+        <!--  Request -->
         <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
-        <!-- قائمة اللغة -->
         <div class="dropdown language-switcher">
           <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
@@ -88,24 +88,21 @@
 
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" dir="ltr"  style="  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  <section id="hero" dir="ltr" style="  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url('assets/img/tee.jpg') center center/cover no-repeat;">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-  
         <div class="carousel-inner" role="listbox">
-  
-          <!-- الشريحة 1 -->
           <div class="carousel-item active">
             <img src="assets/img/Rectangle 1.png" class="w-100" alt="صورة الويب 1">
-  
             <div class="carousel-container" dir="rtl">
               <div class="container text-end">
                 <h2 class="animate__animated animate__fadeInDown" style="text-align: right;">
                   البقاء على تواصل مع عالم العقارات
                 </h2>
                 <p class="animate__animated animate__fadeInUp" style="text-align: right;">
-                  من لقاءات المطورين وفعاليات التواصل إلى حفلات الإطلاق الحصرية، نحن نشكل مستقبل سوق العقارات في دبي بنشاط.
+                  من لقاءات المطورين وفعاليات التواصل إلى حفلات الإطلاق الحصرية، نحن نشكل مستقبل سوق العقارات في دبي
+                  بنشاط.
                 </p>
               </div>
             </div>
@@ -114,8 +111,8 @@
       </div>
     </div>
   </section>
-  
   <!-- End Hero Section -->
+
 
   <!-- ======= Corporate Logo Section ======= -->
   <section class="logo-section">
@@ -214,7 +211,7 @@
   <!-- End Hot Deals Section -->
 
   <!-- ======= Newsletter Subscription Section ======= -->
-  <section  class="newsletter">
+  <section class="newsletter">
     <div class="overlay">
       <h2 class="newsletter-title">أحدث الأخبار والتحديثات</h2>
       <p class="newsletter-desc">
@@ -254,69 +251,65 @@
   </footer>
   <!-- End Footer -->
 
-  <!-- ملفات JavaScript الخاصة بالمكتبات والملف الرئيسي -->
-  <!-- تضمين مكتبات الطرف الثالث -->
+
+  <!-- Vendor JS Files -->
+  <!-- AOS (Animate On Scroll) Library: Adds scroll animations to elements -->
   <script src="assets/vendor/aos/aos.js"></script>
+  <!-- GLightbox: Handles image and video lightbox popups -->
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Isotope: Used for filtering and sorting layout items dynamically -->
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- Swiper.js: For creating responsive, touch-enabled sliders and carousels -->
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Waypoints (No Framework): Detects scroll position to trigger functions -->
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- ملف الـ JS الرئيسي -->
+  <!-- Main JS: Your custom site logic and interactivity -->
   <script src="assets/js/main.js"></script>
-
+  <!-- Language Toggle Script: Dropdown behavior and page language switching -->
   <script>
-    // تفعيل القائمة عند الضغط
     const langToggle = document.querySelector(".lang-toggle");
     const langDropdown = document.querySelector(".lang-dropdown");
-  
+
     langToggle.addEventListener("click", function (e) {
       e.preventDefault();
       const isVisible = langDropdown.style.display === "block";
       langDropdown.style.display = isVisible ? "none" : "block";
     });
-  
-    // إغلاق القائمة إذا ضغطت برّا
+
     document.addEventListener("click", function (e) {
       if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
         langDropdown.style.display = "none";
       }
     });
-  
+
     function switchLang(lang) {
       const currentUrl = window.location.href;
       const url = new URL(currentUrl);
       const pathname = url.pathname;
-  
+
       let newPath;
-  
+
       if (lang === 'ar') {
         document.documentElement.setAttribute("dir", "rtl");
         document.body.classList.add("rtl");
         document.body.classList.remove("ltr");
-  
-        // التبديل للغة العربية حسب الصفحة
+
         newPath = pathname
           .replace("index.en.html", "index.html")
           .replace("estate-details.html", "estate-details.ar.html")
           .replace("contactus.html", "contactus.ar.html");
-  
+
       } else {
         document.documentElement.setAttribute("dir", "ltr");
         document.body.classList.add("ltr");
         document.body.classList.remove("rtl");
-  
-        // التبديل للغة الإنجليزية حسب الصفحة
+
         newPath = pathname
           .replace("index.html", "index.en.html")
           .replace("estate-details.ar.html", "estate-details.html")
           .replace("contactus.ar.html", "contactus.html");
       }
-  
-      // الانتقال إلى الرابط الجديد
       window.location.href = newPath;
-  
-      // إغلاق القائمة بعد اختيار اللغة
       langDropdown.style.display = "none";
     }
   </script>

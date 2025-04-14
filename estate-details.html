@@ -33,7 +33,6 @@
 </head>
 
 
-<!-- تدوير السهم عند الفتح -->
 <!-- .lang-toggle.open .lang-icon {
     transform: rotate(180deg);
   } -->
@@ -57,7 +56,7 @@
                     <li><a class="nav-link scrollto" href="article-en.html">Articles</a></li>
                     <li><a class="nav-link scrollto" href="contactus.html">Contact</a></li>
 
-                    <!-- سوشال ميديا -->
+                    <!-- social-link-->
                     <div class="d-flex justify-content-center my-4">
                         <div class="social-links">
                             <a target="_blank" href="#" class="youtube"><img src="assets/img/socail/youtub.svg"
@@ -80,11 +79,10 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
-                <!-- زر Request -->
+                <!-- Request -->
                 <a href="contactus.html" class="btn btn-outline-dark">
                     Request a consultation
                 </a>
-                <!-- قائمة اللغة -->
                 <div class="dropdown language-switcher">
                     <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
@@ -173,7 +171,6 @@
             <div class="right-slider" id="slider"></div>
         </div>
 
-        <!-- صور مصدر -->
         <div id="imageSource" style="display: none;">
             <img src="assets/img/one2.jpg " alt="">
             <img src="assets/img/two2.jpg " alt="">
@@ -395,10 +392,16 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+
+
+    <!-- Bootstrap Bundle: Includes Popper + Bootstrap JS for responsive components -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS: Your custom JavaScript logic -->
     <script src="assets/js/main.js"></script>
-    <!-- AOS -->
+    <!-- AOS (Animate On Scroll) from CDN: Adds smooth scroll-triggered animations -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- AOS Initialization  Animation -->
     <script>
         AOS.init({
             duration: 1000,
@@ -406,25 +409,22 @@
             offset: 120,
         });
     </script>
+    <!-- Video Click-to-Pause Logic -->
     <script>
-        // الحصول على عناصر الفيديو والـOverlay
         const video = document.getElementById("myVideo");
         const pauseOverlay = document.getElementById("pauseOverlay");
 
-        // إضافة مستمع حدث (click) على الفيديو
         video.addEventListener("click", function () {
             if (!video.paused) {
-                // في حال الفيديو يعمل، نوقفه ونظهر الـOverlay
                 video.pause();
                 pauseOverlay.style.display = "block";
             } else {
-                // في حال الفيديو متوقف، نعيد تشغيله ونخفي الـOverlay
                 video.play();
                 pauseOverlay.style.display = "none";
             }
         });
     </script>
-
+    <!-- Responsive Slider Script: Adapts image layout based on screen size -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const slider = document.getElementById("slider");
@@ -439,7 +439,7 @@
 
                 if (imageList.length === 0) {
                     console.warn("No images found, retrying...");
-                    setTimeout(loadImagesAndInit, 100); // Retry after 100ms
+                    setTimeout(loadImagesAndInit, 100);
                     return;
                 }
 
@@ -530,15 +530,11 @@
             loadImagesAndInit();
         });
     </script>
-
-
- 
-    <!-- Swiper CSS -->
+    <!-- Swiper CSS: Styles for the Swiper slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-    <!-- Swiper JS -->
+    <!-- Swiper JS: Initializes a horizontal scrollable slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
+    <!-- Swiper Slider Initialization: Creates scrollable carousel for .hot-deals-swiper section -->
     <script>
         const swiper = new Swiper(".hot-deals-swiper", {
             slidesPerView: "auto",
@@ -550,63 +546,56 @@
             }
         });
     </script>
+    <!-- Language Toggle Script: Dropdown behavior and page language switching -->
+    <script>
+        const langToggle = document.querySelector(".lang-toggle");
+        const langDropdown = document.querySelector(".lang-dropdown");
 
+        langToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            const isVisible = langDropdown.style.display === "block";
+            langDropdown.style.display = isVisible ? "none" : "block";
+        });
 
-<script>
-    // تفعيل القائمة عند الضغط
-    const langToggle = document.querySelector(".lang-toggle");
-    const langDropdown = document.querySelector(".lang-dropdown");
-  
-    langToggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const isVisible = langDropdown.style.display === "block";
-      langDropdown.style.display = isVisible ? "none" : "block";
-    });
-  
-    // إغلاق القائمة إذا ضغطت برّا
-    document.addEventListener("click", function (e) {
-      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-        langDropdown.style.display = "none";
-      }
-    });
-  
-    function switchLang(lang) {
-      const currentUrl = window.location.href;
-      const url = new URL(currentUrl);
-      const pathname = url.pathname;
-  
-      let newPath;
-  
-      if (lang === 'ar') {
-        document.documentElement.setAttribute("dir", "rtl");
-        document.body.classList.add("rtl");
-        document.body.classList.remove("ltr");
-  
-        // التبديل للغة العربية حسب الصفحة
-        newPath = pathname
-          .replace("index.en.html", "index.html")
-          .replace("estate-details.html", "estate-details.ar.html")
-          .replace("contactus.html", "contactus.ar.html");
-  
-      } else {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.body.classList.add("ltr");
-        document.body.classList.remove("rtl");
-  
-        // التبديل للغة الإنجليزية حسب الصفحة
-        newPath = pathname
-          .replace("index.html", "index.en.html")
-          .replace("estate-details.ar.html", "estate-details.html")
-          .replace("contactus.ar.html", "contactus.html");
-      }
-  
-      // الانتقال إلى الرابط الجديد
-      window.location.href = newPath;
-  
-      // إغلاق القائمة بعد اختيار اللغة
-      langDropdown.style.display = "none";
-    }
-  </script>
+        document.addEventListener("click", function (e) {
+            if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.style.display = "none";
+            }
+        });
+
+        function switchLang(lang) {
+            const currentUrl = window.location.href;
+            const url = new URL(currentUrl);
+            const pathname = url.pathname;
+
+            let newPath;
+
+            if (lang === 'ar') {
+                document.documentElement.setAttribute("dir", "rtl");
+                document.body.classList.add("rtl");
+                document.body.classList.remove("ltr");
+
+                newPath = pathname
+                    .replace("index.en.html", "index.html")
+                    .replace("estate-details.html", "estate-details.ar.html")
+                    .replace("contactus.html", "contactus.ar.html");
+
+            } else {
+                document.documentElement.setAttribute("dir", "ltr");
+                document.body.classList.add("ltr");
+                document.body.classList.remove("rtl");
+
+                newPath = pathname
+                    .replace("index.html", "index.en.html")
+                    .replace("estate-details.ar.html", "estate-details.html")
+                    .replace("contactus.ar.html", "contactus.html");
+            }
+
+            window.location.href = newPath;
+
+            langDropdown.style.display = "none";
+        }
+    </script>
 
 </body>
 

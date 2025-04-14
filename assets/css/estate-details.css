@@ -1,13 +1,10 @@
-/* استيراد الخط */
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
 
-/* تعميم الخط على كل شيء */
 * {
   font-family: "Cairo", sans-serif !important;
 }
 
 .hero-section {
-
   padding: 100px 60px;
   display: flex;
   align-items: center;
@@ -136,13 +133,13 @@
 }
 
 .pause-overlay {
-  display: none; /* يبدأ العنصر مخفيًا */
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* لضمان تمركز العنصر تمامًا */
+  transform: translate(-50%, -50%);
   z-index: 30;
-  pointer-events: none; /* لتعطيل تفاعل النقر عليه إذا لزم الأمر */
+  pointer-events: none;
 }
 
 .pause-overlay img {
@@ -156,7 +153,7 @@
     padding: 90px 0 0 0;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.884)),
       url("../img/hero5.webp") center center/cover no-repeat;
-    overflow: visible; /* مهم جداً عشان يسمح بظهور العناصر اللي تطلع خارج */
+    overflow: visible;
   }
 
   .hero-content {
@@ -228,7 +225,7 @@
 /* media ippad  */
 
 /* ======================= */
-/* 📱 Tablets (iPad)       */
+/*   Tablets (iPad)       */
 /* ======================= */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-section {
@@ -661,7 +658,6 @@
   padding: 20px;
 }
 
-/* العنوان محاذى لليسار */
 .featured-event h2 {
   width: 1000px;
   height: 44px;
@@ -675,7 +671,6 @@
   margin-left: 30px;
 }
 
-/* الوصف محاذى لليسار */
 .featured-event p {
   width: 1100px;
   height: 19px;
@@ -691,14 +686,12 @@
   margin-bottom: 30px;
 }
 
-/* حاوية الصورة */
 .image-wrapper {
   position: relative;
   width: 1199px;
   height: 550px;
 }
 
-/* الصورة مع وضعها فوق المربع الكحلي */
 .featured-event img {
   width: 100%;
   height: 100%;
@@ -709,7 +702,6 @@
   z-index: 1;
 }
 
-/* المربع الكحلي خلف الصورة */
 .blue-box {
   position: absolute;
   width: 100px;
@@ -722,7 +714,6 @@
   z-index: 0;
 }
 
-/* الرابط أسفل الصورة ومحاذاته لليسار */
 /* .event-link {
   width: 141px;
   height: 19px;
@@ -753,18 +744,16 @@
 }
 
 .gain-list li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  top: 10px;  
+  top: 10px;
   width: 8px;
   height: 8px;
   background-color: #333;
   border-radius: 50%;
 }
 
-
-/* اختلاف بدايات الأسطر */
 .gain-list li:nth-child(1) {
   margin-left: 0px;
 }
@@ -791,7 +780,7 @@
   }
 
   .gain-list li::before {
-    content: '';
+    content: "";
     display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
@@ -816,7 +805,7 @@
   .featured-event h2 {
     width: 343px;
     height: auto;
-     font-weight: 500;
+    font-weight: 500;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0;
@@ -828,7 +817,7 @@
   .featured-event p {
     width: 343px;
     height: auto;
-     font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0;
@@ -876,7 +865,7 @@
   .featured-event h2 {
     width: 500px;
     height: auto;
-     font-weight: 500;
+    font-weight: 500;
     font-size: 40px;
     line-height: 110%;
     letter-spacing: 0;
@@ -888,7 +877,7 @@
   .featured-event p {
     width: 500px;
     height: auto;
-     font-weight: 400;
+    font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0;
@@ -1078,8 +1067,6 @@
   opacity: 0;
 } */
 
-
-
 /* media */
 @media (max-width: 767px) {
   .experience-slider-section {
@@ -1161,7 +1148,7 @@
   .title {
     width: 647px;
     height: auto;
-     font-weight: 600;
+    font-weight: 600;
     font-size: 36px;
     line-height: 100%;
     text-align: center;
@@ -1172,7 +1159,7 @@
   .description {
     width: 647px;
     height: auto;
-     font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     text-align: center;
@@ -1359,7 +1346,6 @@
   outline: none;
 }
 
-/* حجم السهم */
 .lang-icon {
   font-size: 12px;
   margin-top: 2px;
@@ -1371,10 +1357,8 @@ body.rtl {
 
 body.ltr {
   text-align: left;
-  font-family: "Inter", sans-serif;
 }
 
-/* جعل السلايدر يعرض كارت وجزء من الآخر */
 .hot-deals-swiper {
   overflow: visible;
 }
@@ -1425,9 +1409,6 @@ body.ltr {
     padding: 5px 10px;
   }
 }
-
-
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .hot-deals-swiper .swiper-slide {
@@ -1517,16 +1498,15 @@ body.ltr {
   border-radius: 4px 4px 0 0;
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .section-title {
-      width: 285px;
-      height: 44px;
-         font-weight: 500;
-      font-size: 36px;
-      line-height: 100%;
-      letter-spacing: 0;
-      color: rgba(0, 0, 0, 1);
+    width: 285px;
+    height: 44px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: rgba(0, 0, 0, 1);
   }
 }
 
@@ -1538,7 +1518,6 @@ body.ltr {
     text-align: left;
     margin: 0 auto;
     margin-bottom: 20px;
-
   }
 
   .section-description {
@@ -1550,11 +1529,11 @@ body.ltr {
     margin-bottom: 20px;
   }
 }
-html, body {
+html,
+body {
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .newsletter {
@@ -1598,11 +1577,9 @@ html, body {
   }
 }
 
-
 /* ==== media ===== */
 /* mobile  */
 @media (max-width: 767px) {
-  /* خصائص مخصصة للموبايل */
   body {
     font-size: 14px;
   }
@@ -1633,9 +1610,9 @@ html, body {
     width: 100% !important;
   }
 }
- /* ipad  */
+/* ipad  */
 
- @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 15px;
   }
@@ -1648,8 +1625,6 @@ html, body {
   .newsletter-form {
     width: 100%;
   }
-
-
 
   .logo-section {
     flex-wrap: wrap;

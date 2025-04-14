@@ -1,3 +1,6 @@
+* {
+  font-family: "Cairo", sans-serif !important;
+}
 .lang-toggle {
   background: none;
   border: none;
@@ -14,13 +17,11 @@
   outline: none;
 }
 
-/* حجم السهم */
 .lang-icon {
   font-size: 12px;
   margin-top: 2px;
 }
 
-/* إعدادات اتجاه الصفحة بناءً على الفئة المُضافة للـ body */
 body.rtl {
   text-align: right;
   font-family: "Cairo", sans-serif;
@@ -28,7 +29,6 @@ body.rtl {
 
 body.ltr {
   text-align: left;
-  font-family: "Inter", sans-serif;
 }
 
 .newsletter-form input[type="email"] {
@@ -42,7 +42,7 @@ body.ltr {
   font-size: 16px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-left: none; /* دمج بصري مع الزر */
+  border-left: none;
   outline: none;
 }
 .newsletter-form button {
@@ -50,15 +50,12 @@ body.ltr {
   border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-right: none; /* يندمج مع الانبوت */
+  border-right: none;
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
 
-
-
 /* mobile  */
 @media (max-width: 767px) {
-  /* خصائص مخصصة للموبايل */
   body {
     font-size: 14px;
   }
@@ -107,17 +104,14 @@ body.ltr {
     line-height: 100%;
     letter-spacing: 0%;
     margin-top: -400px;
-
   }
   #hero p {
     font-size: 16px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0%;
-    
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .contact .section-title.text-center {

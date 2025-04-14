@@ -1,10 +1,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/* استيراد الخط */
+
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
 
-/* تعميم الخط على كل شيء */
 * {
   font-family: "Cairo", sans-serif !important;
 }
@@ -110,7 +109,6 @@ header .logo-w img {
   .header .btn-getstarted,
   .header .btn-getstarted:focus {
     margin-right: 50px;
-    
   }
 }
 @media (min-width: 1279px) {
@@ -508,7 +506,6 @@ header .logo-w img {
     object-position: center;
     object-fit: cover;
   }
-
 }
 
 #hero p {
@@ -524,7 +521,6 @@ header .logo-w img {
   color: #fff;
 }
 
- 
 #hero .carousel-fade {
   overflow: hidden;
 }
@@ -726,7 +722,6 @@ header .logo-w img {
   padding: 20px;
 }
 
-/* العنوان محاذى لليسار */
 .featured-event h2 {
   width: 586px;
   height: 44px;
@@ -738,7 +733,6 @@ header .logo-w img {
   align-self: flex-start;
 }
 
-/* الوصف محاذى لليسار */
 .featured-event p {
   width: 586px;
   height: 19px;
@@ -751,14 +745,12 @@ header .logo-w img {
   margin-top: -40px;
 }
 
-/* حاوية الصورة */
 .image-wrapper {
   position: relative;
   width: 1199px;
   height: 550px;
 }
 
-/* الصورة مع وضعها فوق المربع الكحلي */
 .featured-event img {
   width: 100%;
   height: 100%;
@@ -770,7 +762,6 @@ header .logo-w img {
   z-index: 1;
 }
 
-/* المربع الكحلي خلف الصورة */
 .blue-box {
   position: absolute;
   width: 100px;
@@ -783,7 +774,6 @@ header .logo-w img {
   z-index: 0;
 }
 
-/* الرابط أسفل الصورة ومحاذاته لليسار */
 .event-link {
   width: 141px;
   height: 19px;
@@ -831,7 +821,6 @@ header .logo-w img {
     height: auto;
     max-height: 300px;
     border-radius: 2px;
-    
   }
 
   .blue-box {
@@ -906,7 +895,6 @@ header .logo-w img {
 
 /* Section Container */
 .hot-deals {
-
   background-color: white;
 }
 
@@ -964,7 +952,6 @@ header .logo-w img {
   transition: transform 0.3s ease;
 }
 
-
 .card:hover {
   transform: translateY(-5px);
 }
@@ -974,16 +961,16 @@ header .logo-w img {
 
 /* Card Image with Hover Animation */
 .card-image img {
-  width: 390px ;
+  width: 390px;
   height: 250px;
   object-fit: cover;
   border-radius: 2px;
-  
+
   transition: transform 0.3s ease;
 }
 @media (min-width: 280px) and (max-width: 414px) {
   .card-image img {
-    width:350px;
+    width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 2px;
@@ -1080,8 +1067,7 @@ header .logo-w img {
 
 /* Title */
 .newsletter-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+    font-weight: 600;
   font-size: 36px;
   line-height: 100%;
   color: white;
@@ -1090,8 +1076,7 @@ header .logo-w img {
 
 /* Description */
 .newsletter-desc {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+    font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: white;
@@ -1104,7 +1089,7 @@ header .logo-w img {
   height: 48px;
   display: flex;
   justify-content: center;
-  align-items: stretch; /* مهم ليوحد الارتفاع بين الانبوت والزر */
+  align-items: stretch;
   margin: 10px auto 0 auto;
 }
 
@@ -1119,7 +1104,7 @@ header .logo-w img {
   font-size: 16px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-right: none; /* دمج بصري مع الزر */
+  border-right: none;
   outline: none;
 }
 
@@ -1307,7 +1292,6 @@ header .logo-w img {
   outline: none;
 }
 
-/* حجم السهم */
 .lang-icon {
   font-size: 12px;
   margin-top: 2px;
@@ -1319,13 +1303,11 @@ body.rtl {
 
 body.ltr {
   text-align: left;
-  font-family: "Inter", sans-serif;
-}
+  }
 
 /* ==== media ===== */
 /* mobile  */
 @media (max-width: 767px) {
-  /* خصائص مخصصة للموبايل */
   body {
     font-size: 14px;
   }
@@ -1375,14 +1357,12 @@ body.ltr {
     line-height: 100%;
     letter-spacing: 0%;
     margin-top: -400px;
-
   }
   #hero p {
     font-size: 16px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0%;
-    
   }
 }
 /* ipad  */
@@ -1408,7 +1388,6 @@ body.ltr {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* حجم القسم */
   .hot-deals {
     width: 768px;
     padding-right: 60px;
@@ -1421,8 +1400,7 @@ body.ltr {
   .section-title {
     width: 285px;
     height: 44px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+        font-weight: 500;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1432,8 +1410,7 @@ body.ltr {
   .section-description {
     width: 690px;
     height: 19px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+        font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1476,8 +1453,7 @@ body.ltr {
   .card-date {
     width: 312px;
     height: 19px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+        font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1487,8 +1463,7 @@ body.ltr {
   .card-title {
     width: 282px;
     height: 48px;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
+        font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1499,8 +1474,7 @@ body.ltr {
   .card-desc {
     width: 282px;
     height: 57px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+        font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1511,8 +1485,7 @@ body.ltr {
   .card-link {
     width: 200px;
     height: 50px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+        font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1581,7 +1554,7 @@ body.ltr {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 30px;
-    text-align: right; /* أو left حسب اللغة */
+    text-align: right;
   }
 }
 
@@ -1628,12 +1601,10 @@ body.ltr {
 }
 /* --------------------------------------------------------------------*************** */
 
-
-
 @media (max-width: 768px) {
   #hero {
-    height: auto;  
-    padding: 278px 26px;  
+    height: auto;
+    padding: 278px 26px;
   }
 
   #hero .carousel-item img {
@@ -1644,7 +1615,6 @@ body.ltr {
   }
 
   #hero .carousel-container {
-
     padding: 0;
     position: static;
   }
@@ -1671,13 +1641,11 @@ body.ltr {
   }
 
   .logo-section {
-    margin-top: 0 !important; /* إزالة المسافة تحت الهيرو */
+    margin-top: 0 !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
- 
-
   #hero h2 {
     width: 650px;
     height: 120px;
@@ -1699,10 +1667,9 @@ body.ltr {
     color: white;
     margin-left: 30px;
     margin-top: -30px;
-
   }
 
   .logo-section {
-    margin-top: 0 !important; 
+    margin-top: 0 !important;
   }
 }

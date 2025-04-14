@@ -1,10 +1,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/* استيراد الخط */
+
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
 
-/* تعميم الخط على كل شيء */
 * {
   font-family: "Cairo", sans-serif !important;
 }
@@ -665,7 +664,6 @@ header .logo-w img {
   padding: 20px;
 }
 
-/* العنوان محاذى لليسار */
 .featured-event h2 {
   width: 586px;
   height: 44px;
@@ -676,10 +674,8 @@ header .logo-w img {
   text-align: right;
   align-self: flex-start;
   margin-right: 7px;
-  
 }
 
-/* الوصف محاذى لليسار */
 .featured-event p {
   width: 586px;
   height: 19px;
@@ -690,17 +686,14 @@ header .logo-w img {
   text-align: right;
   align-self: flex-start;
   margin-right: 7px;
-
 }
 
-/* حاوية الصورة */
 .image-wrapper {
   position: relative;
   width: 1199px;
   height: 550px;
 }
 
-/* الصورة مع وضعها فوق المربع الكحلي */
 .featured-event img {
   width: 100%;
   height: 100%;
@@ -711,7 +704,6 @@ header .logo-w img {
   z-index: 1;
 }
 
-/* المربع الكحلي خلف الصورة */
 .blue-box {
   position: absolute;
   width: 100px;
@@ -724,7 +716,6 @@ header .logo-w img {
   z-index: 0;
 }
 
-/* الرابط أسفل الصورة ومحاذاته لليسار */
 .event-link {
   width: 141px;
   height: 19px;
@@ -737,7 +728,6 @@ header .logo-w img {
   align-self: flex-start;
   color: rgba(29, 52, 76, 1);
   margin-right: 7px;
-
 }
 /* End */
 
@@ -801,7 +791,6 @@ header .logo-w img {
   margin-bottom: 20px;
 }
 
-
 .card:hover {
   transform: translateY(-5px);
 }
@@ -811,14 +800,13 @@ header .logo-w img {
 
 /* Card Image with Hover Animation */
 .card-image img {
-  width: 390px ;
+  width: 390px;
   height: 250px;
   object-fit: cover;
   border-radius: 2px;
-  
+
   transition: transform 0.3s ease;
 }
-
 
 .card:hover .card-image img {
   transform: scale(1.05);
@@ -855,7 +843,7 @@ header .logo-w img {
   font-weight: 400;
   line-height: 130%;
   padding: 10px;
-  margin-top:  30px;
+  margin-top: 30px;
 }
 
 /* View Details Link */
@@ -867,16 +855,15 @@ header .logo-w img {
   text-decoration: underline;
   color: rgba(29, 52, 76, 1);
   padding: 5px 10px;
-  margin-top:   0px;
+  margin-top: 0px;
 }
 
 /* End: Hot Deals Section   */
 @media (min-width: 768px) and (max-width: 1024px) {
   body.rtl .hot-deals {
     margin-left: 0;
-    margin-right: 0; /* أو 100px لو بدك تحركه عن اليمين */
+    margin-right: 0;
   }
-  
 
   body.rtl .section-title,
   body.rtl .section-description {
@@ -948,8 +935,7 @@ header .logo-w img {
 
 /* Title */
 .newsletter-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
+   font-weight: 600;
   font-size: 36px;
   line-height: 100%;
   color: white;
@@ -958,8 +944,7 @@ header .logo-w img {
 
 /* Description */
 .newsletter-desc {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: white;
@@ -972,7 +957,7 @@ header .logo-w img {
   height: 48px;
   display: flex;
   justify-content: center;
-  align-items: stretch; /* مهم ليوحد الارتفاع بين الانبوت والزر */
+  align-items: stretch;
   margin: 10px auto 0 auto;
 }
 
@@ -987,7 +972,7 @@ header .logo-w img {
   font-size: 16px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-right: none; /* دمج بصري مع الزر */
+  border-right: none;
   outline: none;
 }
 
@@ -1134,7 +1119,6 @@ header .logo-w img {
   outline: none;
 }
 
-/* حجم السهم */
 .lang-icon {
   font-size: 12px;
   margin-top: 2px;
@@ -1146,10 +1130,7 @@ body.rtl {
 
 body.ltr {
   text-align: left;
-  font-family: "Inter", sans-serif;
-}
-
-
+ }
 
 .newsletter-form input[type="email"] {
   width: 374px;
@@ -1162,7 +1143,7 @@ body.ltr {
   font-size: 16px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-left: none; /* دمج بصري مع الزر */
+  border-left: none;
   outline: none;
 }
 .newsletter-form button {
@@ -1170,22 +1151,17 @@ body.ltr {
   border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-right: none; /* يندمج مع الانبوت */
+  border-right: none;
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
-
 
 .hot-deals {
   background-color: white;
 }
 
-
 /*-------------------------------------
 --------------------------
------------------------------
------------------------------
------------------------------
------------------------------
+ 
 ---------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
@@ -1196,13 +1172,13 @@ body.ltr {
   .navbar {
     position: fixed;
     top: 0;
-    left: -100%;  
+    left: -100%;
     width: calc(100% - 70px);
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
   }
-  
+
   .navbar ul {
     position: absolute;
     inset: 0;
@@ -1307,8 +1283,7 @@ body.ltr {
   }
 }
 
-
-@media (max-width: 767px)  {
+@media (max-width: 767px) {
   .logo-section {
     overflow-x: auto;
     white-space: nowrap;
@@ -1338,7 +1313,7 @@ body.ltr {
 @media (max-width: 1024px) {
   .logo-section {
     display: flex;
-    flex-wrap: nowrap !important; /* يمنع النزول لسطر جديد */
+    flex-wrap: nowrap !important;
     overflow-x: auto;
     white-space: nowrap;
     justify-content: flex-start;
@@ -1356,7 +1331,6 @@ body.ltr {
     display: inline-block;
   }
 }
-
 
 @media (max-width: 767px) {
   .featured-event {
@@ -1463,7 +1437,7 @@ body.ltr {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 30px;
-    text-align: right; /* أو left حسب اللغة */
+    text-align: right;
   }
 }
 
@@ -1509,11 +1483,9 @@ body.ltr {
   }
 }
 
-
 /* ==== media ===== */
 /* mobile  */
 @media (max-width: 767px) {
-  /* خصائص مخصصة للموبايل */
   body {
     font-size: 14px;
   }
@@ -1544,9 +1516,9 @@ body.ltr {
     width: 100% !important;
   }
 }
- /* ipad  */
+/* ipad  */
 
- @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 15px;
   }
@@ -1559,8 +1531,6 @@ body.ltr {
   .newsletter-form {
     width: 100%;
   }
-
-
 
   .logo-section {
     flex-wrap: wrap;
@@ -1578,12 +1548,7 @@ body.ltr {
   }
 } */
 
- 
- 
-
-
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* حجم القسم */
   .hot-deals {
     width: 768px;
     padding-right: 60px;
@@ -1596,8 +1561,7 @@ body.ltr {
   .section-title {
     width: 690px;
     height: 44px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+       font-weight: 500;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1607,8 +1571,7 @@ body.ltr {
   .section-description {
     width: 690px;
     height: 19px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+       font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1651,8 +1614,7 @@ body.ltr {
   .card-date {
     width: 312px;
     height: 19px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+       font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1662,20 +1624,17 @@ body.ltr {
   .card-title {
     width: 282px;
     height: 48px;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
+       font-weight: 600;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: 0;
     color: rgba(0, 0, 0, 1);
-
   }
 
   .card-desc {
     width: 282px;
     height: 57px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+       font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0;
@@ -1687,24 +1646,21 @@ body.ltr {
   .card-link {
     width: 200px;
     height: 50px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+       font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
     text-decoration: underline;
-    color:  rgba(29, 52, 76, 1);
+    color: rgba(29, 52, 76, 1);
     padding: 5px 10px;
     margin-top: 2px;
-
   }
 }
 
-
 @media (max-width: 768px) {
   #hero {
-    height: auto;  
-    padding: 278px 26px;  
+    height: auto;
+    padding: 278px 26px;
   }
 
   #hero .carousel-item img {
@@ -1715,7 +1671,6 @@ body.ltr {
   }
 
   #hero .carousel-container {
-
     padding: 0;
     position: static;
   }
@@ -1728,7 +1683,6 @@ body.ltr {
     line-height: 100%;
     color: white;
     margin-left: 30px;
-  
   }
 
   #hero p {
@@ -1743,12 +1697,10 @@ body.ltr {
   }
 
   .logo-section {
-    margin-top: 0 !important; /* إزالة المسافة تحت الهيرو */
+    margin-top: 0 !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
- 
-
   #hero h2 {
     width: 650px;
     height: 120px;
@@ -1770,17 +1722,16 @@ body.ltr {
     color: white;
     margin-left: 30px;
     margin-top: -30px;
-
   }
 
   .logo-section {
-    margin-top: 0 !important; 
+    margin-top: 0 !important;
   }
 }
 
 @media (min-width: 280px) and (max-width: 414px) {
   .card-image img {
-    width:350px;
+    width: 350px;
     height: 250px;
     object-fit: cover;
     border-radius: 2px;
