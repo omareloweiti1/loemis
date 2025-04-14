@@ -1059,8 +1059,7 @@ header .logo-w img {
   height: 400px;
   margin: 60px auto;
   border-radius: 2px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/tee.jpg") center center/cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
