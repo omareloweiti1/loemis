@@ -53,3 +53,84 @@ body.ltr {
   border-right: none; /* يندمج مع الانبوت */
   border-right: 1px solid rgba(255, 255, 255, 1);
 }
+
+
+
+/* mobile  */
+@media (max-width: 767px) {
+  /* خصائص مخصصة للموبايل */
+  body {
+    font-size: 14px;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+    border-radius: 5px !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+  }
+
+  .hot-deals {
+    margin-left: 0;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+  #hero h2,
+  #hero p {
+    text-align: right !important;
+    width: 100% !important;
+  }
+  #hero h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: -400px;
+
+  }
+  #hero p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0%;
+    
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact .section-title.text-center {
+    text-align: center;
+    margin: 0 auto 200px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .section-title.text-center h2,
+  .contact .section-title.text-center p {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}

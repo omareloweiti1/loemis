@@ -103,6 +103,7 @@
     <br>
     <br>
 
+
     <!-- ======= hero Section ======= -->
     <section class="hero-section">
         <div class="hero-content">
@@ -256,7 +257,6 @@
             <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
-        <!-- <a href="#" class="event-link">View Event Details</a> -->
     </section>
 
     <!-- End Featured Event Section -->
@@ -292,45 +292,64 @@
     <!-- End Featured Event Section -->
 
     <!-- =======  Hot Deals Section ======= -->
+    <!-- ======= Hot Deals Section ======= -->
     <section class="hot-deals">
         <div class="container">
             <h2 class="section-title">Dubai Real Estate Market Insights</h2>
             <p class="section-description">Dubai Real Estate Market Insights, Latest Market Trends & Investment Tips</p>
-            <div class="cards-wrapper">
-                <a href="estate-details.html" class="card">
-                    <div class="card-image">
-                        <img src="assets/img/Rectangle 2.svg" alt="Real Estate" />
+
+            <div class="swiper hot-deals-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="estate-details.html" class="card">
+                            <div class="card-image">
+                                <img src="assets/img/Rectangle 2.svg" alt="Real Estate" />
+                            </div>
+                            <div class="card-date">25 Jan 2025 · 10 min Read</div>
+                            <div class="card-title">Office ipsum you must be muted. Sexy well</div>
+                            <div class="card-desc">
+                                We've take creep effects let's first-order new it's working based can't.
+                            </div>
+                            <div class="card-link">View Details</div>
+                        </a>
                     </div>
-                    <div class="card-date">25 Jan 2025 . 10 min Read</div>
-                    <div class="card-title">Office ipsum you must be muted. Sexy well</div>
-                    <div class="card-desc">We've take creep effects let's first-order new it's working based can't.
+
+                    <div class="swiper-slide">
+                        <a href="estate-details.html" class="card">
+                            <div class="card-image">
+                                <img src="assets/img/Rectangle 2 (1).svg" alt="Real Estate" />
+                            </div>
+                            <div class="card-date">25 Jan 2025 · 10 min Read</div>
+                            <div class="card-title">Office ipsum you must be muted. Sexy well</div>
+                            <div class="card-desc">
+                                Office ipsum you must be muted. Synergy loss centric finance journey files.
+                                Discussions panel boil view.
+                            </div>
+                            <div class="card-link">View Details</div>
+                        </a>
                     </div>
-                    <div class="card-link">View Details</div>
-                </a>
-                <a href="estate-details.html" class="card">
-                    <div class="card-image">
-                        <img src="assets/img/Rectangle 2 (1).svg" alt="Real Estate" />
+
+                    <div class="swiper-slide">
+                        <a href="estate-details.html" class="card">
+                            <div class="card-image">
+                                <img src="assets/img/Rectangle 2 (2).svg" alt="Real Estate" />
+                            </div>
+                            <div class="card-date">25 Jan 2025 · 10 min Read</div>
+                            <div class="card-title">Office ipsum you must be muted. Sexy well</div>
+                            <div class="card-desc">
+                                We've take creep effects let's first-order new it's working based can't.
+                            </div>
+                            <div class="card-link">View Details</div>
+                        </a>
                     </div>
-                    <div class="card-date">25 Jan 2025 . 10 min Read</div>
-                    <div class="card-title">Office ipsum you must be muted. Sexy well</div>
-                    <div class="card-desc">Office ipsum you must be muted. Synergy loss centric finance journey files.
-                        Discussions
-                        panel boil view.</div>
-                    <div class="card-link">View Details</div>
-                </a>
-                <a href="estate-details.html" class="card">
-                    <div class="card-image">
-                        <img src="assets/img/Rectangle 2 (2).svg" alt="Real Estate" />
-                    </div>
-                    <div class="card-date">25 Jan 2025 . 10 min Read</div>
-                    <div class="card-title">Office ipsum you must be muted. Sexy well</div>
-                    <div class="card-desc">We've take creep effects let's first-order new it's working based can't.
-                    </div>
-                    <div class="card-link">View Details</div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
+    <!-- End: Hot Deals Section -->
+
+
+
     <!-- End: Hot Deals Section -->
 
     <!-- =======  Newsletter Subscription Section ======= -->
@@ -409,26 +428,76 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            const imgTags = document.querySelectorAll("#imageSource img");
-            const imageList = Array.from(imgTags).map(img => img.src);
-
-            let currentIndex = 0;
             const slider = document.getElementById("slider");
             const dots = document.getElementById("dots");
+            const imgTags = document.querySelectorAll("#imageSource img");
 
-            let isMobile = window.innerWidth <= 767;
+            let imageList = [];
+            let currentIndex = 0;
+
+            function loadImagesAndInit() {
+                imageList = Array.from(imgTags).map(img => img.src).filter(src => src);
+
+                if (imageList.length === 0) {
+                    console.warn("No images found, retrying...");
+                    setTimeout(loadImagesAndInit, 100); // Retry after 100ms
+                    return;
+                }
+
+                renderSlides();
+                setInterval(nextSlide, 5000);
+                window.addEventListener('resize', () => {
+                    setTimeout(renderSlides, 100);
+                });
+            }
+
+            function isMobile() {
+                return window.innerWidth <= 767;
+            }
+
+            function isTablet() {
+                return window.innerWidth >= 768 && window.innerWidth <= 1024;
+            }
+
+            function isDesktop() {
+                return window.innerWidth > 1024;
+            }
 
             function renderSlides() {
-                slider.innerHTML = '';
-                const currentImg = imageList[currentIndex];
-                const nextImg = imageList[(currentIndex + 1) % imageList.length];
+                if (!slider || !dots || imageList.length === 0) return;
 
-                if (isMobile) {
-                    const mobileSlide = document.createElement('div');
-                    mobileSlide.className = 'slide big';
-                    mobileSlide.style.backgroundImage = `url(${currentImg})`;
-                    slider.appendChild(mobileSlide);
-                } else {
+                slider.innerHTML = '';
+                const total = imageList.length;
+
+                if (isMobile()) {
+                    const currentImg = imageList[currentIndex];
+                    const slide = document.createElement('div');
+                    slide.className = 'slide big';
+                    slide.style.backgroundImage = `url(${currentImg})`;
+                    slider.appendChild(slide);
+                } else if (isTablet()) {
+                    const prevIndex = (currentIndex - 1 + total) % total;
+                    const nextIndex = (currentIndex + 1) % total;
+
+                    const slidePrev = document.createElement('div');
+                    slidePrev.className = 'slide small';
+                    slidePrev.style.backgroundImage = `url(${imageList[prevIndex]})`;
+
+                    const slideCurrent = document.createElement('div');
+                    slideCurrent.className = 'slide big';
+                    slideCurrent.style.backgroundImage = `url(${imageList[currentIndex]})`;
+
+                    const slideNext = document.createElement('div');
+                    slideNext.className = 'slide small';
+                    slideNext.style.backgroundImage = `url(${imageList[nextIndex]})`;
+
+                    slider.appendChild(slidePrev);
+                    slider.appendChild(slideCurrent);
+                    slider.appendChild(slideNext);
+                } else if (isDesktop()) {
+                    const currentImg = imageList[currentIndex];
+                    const nextImg = imageList[(currentIndex + 1) % total];
+
                     const slide1 = document.createElement('div');
                     slide1.className = 'slide big';
                     slide1.style.backgroundImage = `url(${currentImg})`;
@@ -458,22 +527,31 @@
                 renderSlides();
             }
 
-            renderSlides();
-
-            window.addEventListener('resize', () => {
-                const newIsMobile = window.innerWidth <= 767;
-                if (newIsMobile !== isMobile) {
-                    isMobile = newIsMobile;
-                    renderSlides();
-                }
-            });
-
-            setInterval(nextSlide, 8000);
+            // Start
+            loadImagesAndInit();
         });
-
-
-
     </script>
+
+
+ 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".hot-deals-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+    </script>
+
 
     <script>
         function switchLang(lang) {
