@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto" href="#about">لماذا نحن</a></li>
           <li><a class="nav-link scrollto" href="#our-team">فريقنا</a></li>
           <li><a class="nav-link scrollto" href="article-en.html">المقالات</a></li>
-          <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
+          <li><a class="nav-link scrollto" href="contactus.ar.html">تواصل معنا</a></li>
 
           <div class="d-flex justify-content-center my-4">
             <div class="social-links">
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="d-lg-none d-flex justify-content-center mt-3">
-            <a href="contactus.html" class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+            <a href="contactus.ar.html" class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
               طلب استشارة
             </a>
           </div>
@@ -68,7 +68,7 @@
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
         <!-- زر Request -->
-        <a href="contactus.html" class="btn btn-outline-dark">
+        <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
         <!-- قائمة اللغة -->
@@ -136,7 +136,7 @@
       <img src="assets/img/Rectangle 196.svg" alt="صورة الحدث" />
       <div class="blue-box"></div>
     </div>
-    <a href="#" class="event-link">عرض تفاصيل الحدث</a>
+    <a href="estate-details.ar.html" class="event-link">عرض تفاصيل الحدث</a>
   </section>
   <!-- End Featured Event Section -->
 
@@ -147,7 +147,7 @@
       <p class="section-description">رؤى سوق العقارات في دبي، أحدث اتجاهات السوق ونصائح الاستثمار</p>
 
       <div class="cards-wrapper">
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2.svg" alt="عقارات" />
           </div>
@@ -157,7 +157,7 @@
           <div class="card-link">عرض التفاصيل</div>
         </a>
 
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2 (1).svg" alt="عقارات" />
           </div>
@@ -168,7 +168,7 @@
           <div class="card-link">عرض التفاصيل</div>
         </a>
 
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2 (2).svg" alt="عقارات" />
           </div>
@@ -178,7 +178,7 @@
           <div class="card-link">عرض التفاصيل</div>
         </a>
 
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2 (3).svg" alt="عقارات" />
           </div>
@@ -188,7 +188,7 @@
           <div class="card-link">عرض التفاصيل</div>
         </a>
 
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2 (4).svg" alt="عقارات" />
           </div>
@@ -198,7 +198,7 @@
           <div class="card-link">عرض التفاصيل</div>
         </a>
 
-        <a href="estate-details.html" class="card">
+        <a href="estate-details.ar.html" class="card">
           <div class="card-image">
             <img src="assets/img/Rectangle 2 (5).svg" alt="عقارات" />
           </div>
@@ -213,7 +213,7 @@
   <!-- End Hot Deals Section -->
 
   <!-- ======= Newsletter Subscription Section ======= -->
-  <section class="newsletter">
+  <section  class="newsletter">
     <div class="overlay">
       <h2 class="newsletter-title">أحدث الأخبار والتحديثات</h2>
       <p class="newsletter-desc">
@@ -268,31 +268,53 @@
     // تفعيل القائمة عند الضغط
     const langToggle = document.querySelector(".lang-toggle");
     const langDropdown = document.querySelector(".lang-dropdown");
-
+  
     langToggle.addEventListener("click", function (e) {
       e.preventDefault();
       const isVisible = langDropdown.style.display === "block";
       langDropdown.style.display = isVisible ? "none" : "block";
     });
-
+  
     // إغلاق القائمة إذا ضغطت برّا
     document.addEventListener("click", function (e) {
       if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
         langDropdown.style.display = "none";
       }
     });
-
+  
     function switchLang(lang) {
+      const currentUrl = window.location.href;
+      const url = new URL(currentUrl);
+      const pathname = url.pathname;
+  
+      let newPath;
+  
       if (lang === 'ar') {
         document.documentElement.setAttribute("dir", "rtl");
         document.body.classList.add("rtl");
         document.body.classList.remove("ltr");
+  
+        // التبديل للغة العربية حسب الصفحة
+        newPath = pathname
+          .replace("index.en.html", "index.html")
+          .replace("estate-details.html", "estate-details.ar.html")
+          .replace("contactus.html", "contactus.ar.html");
+  
       } else {
         document.documentElement.setAttribute("dir", "ltr");
         document.body.classList.add("ltr");
         document.body.classList.remove("rtl");
+  
+        // التبديل للغة الإنجليزية حسب الصفحة
+        newPath = pathname
+          .replace("index.html", "index.en.html")
+          .replace("estate-details.ar.html", "estate-details.html")
+          .replace("contactus.ar.html", "contactus.html");
       }
-
+  
+      // الانتقال إلى الرابط الجديد
+      window.location.href = newPath;
+  
       // إغلاق القائمة بعد اختيار اللغة
       langDropdown.style.display = "none";
     }

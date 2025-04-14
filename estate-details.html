@@ -50,12 +50,12 @@
 
             <nav id="navbar" class="navbar order-2 order-lg-1">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="index.en.html">Home</a></li>
                     <li><a class="nav-link scrollto" href="#service">Service</a></li>
                     <li><a class="nav-link scrollto" href="#about">Why us</a></li>
                     <li><a class="nav-link scrollto" href="#our-team">Our team</a></li>
                     <li><a class="nav-link scrollto" href="article-en.html">Articles</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="contactus.html">Contact</a></li>
 
                     <!-- سوشال ميديا -->
                     <div class="d-flex justify-content-center my-4">
@@ -112,13 +112,13 @@
                 <p>
                     Building strong connections with the region’s most influential developers
                 </p>
-                <a href="#contact" class="cta-button">Contact Us</a>
+                <a href="contactus.html" class="cta-button">Contact Us</a>
             </div>
 
             <div class="phone-area" data-aos="fade-left">
                 <div class="iphone-frame">
                     <div class="video-wrapper">
-                        <video id="myVideo" src="assets/img/110923-689949643.mp4" autoplay muted loop
+                        <video id="myVideo" src="assets/img/191518-890528350.mp4" autoplay muted loop
                             playsinline></video>
                         <div class="pause-overlay" id="pauseOverlay">
                             <img src="assets/img/svgexport-15 (43) 4 (1).png" alt="Pause Icon" />
@@ -174,12 +174,10 @@
 
         <!-- صور مصدر -->
         <div id="imageSource" style="display: none;">
-            <img src="assets/img/mobile/1.jpg" alt="">
-            <img src="assets/img/mobile/2.png" alt="">
-            <img src="assets/img/mobile/4.png" alt="">
-            <img src="assets/img/mobile/downlo2.jpeg" alt="">
-            <img src="assets/img/mobile/download.jpg" alt="">
-            <img src="assets/img/mobile/download3.jpeg" alt="">
+            <img src="assets/img/one2.jpg " alt="">
+            <img src="assets/img/two2.jpg " alt="">
+            <img src="assets/img/threre2.jpg " alt="">
+            <img src="assets/img/four2.jpg " alt="">
         </div>
     </section>
 
@@ -198,7 +196,7 @@
         <p>Our team had the honor of attending an exclusive developer event hosted by the Al Habtoor Group – a leading
             name in the UAE’s real estate and hospitality industry.</p>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <img src="assets/img/Rectangle 196 (1).svg" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
         <!-- <a href="#" class="event-link">View Event Details</a> -->
@@ -231,7 +229,7 @@
             developers, and partners to exchange ideas, showcase upcoming projects, and explore potential
             collaborations collaborations.</p>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <img src="assets/img/Rectangle 196 (1).svg" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
         <!-- <a href="#" class="event-link">View Event Details</a> -->
@@ -254,7 +252,7 @@
             </li>
         </ul>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <img src="assets/img/Rectangle 1.png" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
     </section>
@@ -553,21 +551,61 @@
     </script>
 
 
-    <script>
-        function switchLang(lang) {
-            if (lang === 'ar') {
-                document.documentElement.setAttribute("dir", "rtl");
-                document.documentElement.lang = "ar";
-                document.body.classList.add("rtl");
-                document.body.classList.remove("ltr");
-            } else {
-                document.documentElement.setAttribute("dir", "ltr");
-                document.documentElement.lang = "en";
-                document.body.classList.add("ltr");
-                document.body.classList.remove("rtl");
-            }
-        }
-    </script>
+<script>
+    // تفعيل القائمة عند الضغط
+    const langToggle = document.querySelector(".lang-toggle");
+    const langDropdown = document.querySelector(".lang-dropdown");
+  
+    langToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const isVisible = langDropdown.style.display === "block";
+      langDropdown.style.display = isVisible ? "none" : "block";
+    });
+  
+    // إغلاق القائمة إذا ضغطت برّا
+    document.addEventListener("click", function (e) {
+      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.style.display = "none";
+      }
+    });
+  
+    function switchLang(lang) {
+      const currentUrl = window.location.href;
+      const url = new URL(currentUrl);
+      const pathname = url.pathname;
+  
+      let newPath;
+  
+      if (lang === 'ar') {
+        document.documentElement.setAttribute("dir", "rtl");
+        document.body.classList.add("rtl");
+        document.body.classList.remove("ltr");
+  
+        // التبديل للغة العربية حسب الصفحة
+        newPath = pathname
+          .replace("index.en.html", "index.html")
+          .replace("estate-details.html", "estate-details.ar.html")
+          .replace("contactus.html", "contactus.ar.html");
+  
+      } else {
+        document.documentElement.setAttribute("dir", "ltr");
+        document.body.classList.add("ltr");
+        document.body.classList.remove("rtl");
+  
+        // التبديل للغة الإنجليزية حسب الصفحة
+        newPath = pathname
+          .replace("index.html", "index.en.html")
+          .replace("estate-details.ar.html", "estate-details.html")
+          .replace("contactus.ar.html", "contactus.html");
+      }
+  
+      // الانتقال إلى الرابط الجديد
+      window.location.href = newPath;
+  
+      // إغلاق القائمة بعد اختيار اللغة
+      langDropdown.style.display = "none";
+    }
+  </script>
 
 </body>
 

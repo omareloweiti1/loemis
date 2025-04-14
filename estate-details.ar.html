@@ -44,12 +44,12 @@
 
       <nav id="navbar" class="navbar order-2 order-lg-1">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">الرئيسية</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">الرئيسية</a></li>
           <li><a class="nav-link scrollto" href="#service">خدماتنا</a></li>
           <li><a class="nav-link scrollto" href="#about">لماذا نحن</a></li>
           <li><a class="nav-link scrollto" href="#our-team">فريقنا</a></li>
-          <li><a class="nav-link scrollto" href="article-en.html">المقالات</a></li>
-          <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
+          <li><a class="nav-link scrollto" href="#">المقالات</a></li>
+          <li><a class="nav-link scrollto" href="contactus.ar.html">تواصل معنا</a></li>
 
           <!-- سوشال ميديا -->
           <div class="d-flex justify-content-center my-4">
@@ -61,7 +61,8 @@
             </div>
           </div>
           <div class="d-lg-none d-flex justify-content-center mt-3">
-            <a href="contactus.html" class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
+            <a href="contactus.ar.html"
+              class=" custom-width  lang py-2 px-3 btn btn-outline-dark d-inline-block scrollto">
               طلب استشارة
             </a>
           </div>
@@ -70,7 +71,7 @@
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
         <!-- زر Request -->
-        <a href="contactus.html" class="btn btn-outline-dark">
+        <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
         <!-- قائمة اللغة -->
@@ -100,13 +101,13 @@
           أوفيس إيبسوم يجب أن تكون مكتومًا. مقاييس الأداء تفتح رؤية عملاقة مسبقًا لتحديد السعر. التخلي عن الإيقاع
           المباشر لإيجاد حلول بديلة للنقاش. يبحث المراقبون عن الموارد. ما هو الفيروس أو من يتمايل.
         </p>
-        <a href="#contact" class="cta-button">اتصل بنا</a>
+        <a href="contactus.ar.html" class="cta-button">اتصل بنا</a>
       </div>
 
       <div class="phone-area" data-aos="fade-left">
         <div class="iphone-frame">
           <div class="video-wrapper">
-            <video id="myVideo" src="assets/img/110923-689949643.mp4" autoplay muted loop playsinline></video>
+            <video id="myVideo" src="assets/img/191518-890528350.mp4" autoplay muted loop playsinline></video>
             <div class="pause-overlay" id="pauseOverlay">
               <img src="assets/img/svgexport-15 (43) 4 (1).png" alt="أيقونة الإيقاف" />
             </div>
@@ -135,12 +136,10 @@
 
     <!-- صور مصدر -->
     <div id="imageSource" style="display: none;">
-      <img src="assets/img/mobile/1.jpg" alt="">
-      <img src="assets/img/mobile/2.png" alt="">
-      <img src="assets/img/mobile/4.png" alt="">
-      <img src="assets/img/mobile/downlo2.jpeg" alt="">
-      <img src="assets/img/mobile/download.jpg" alt="">
-      <img src="assets/img/mobile/download3.jpeg" alt="">
+      <img src="assets/img/one2.jpg " alt="">
+      <img src="assets/img/two2.jpg " alt="">
+      <img src="assets/img/threre2.jpg " alt="">
+      <img src="assets/img/four2.jpg " alt="">
     </div>
   </section>
 
@@ -221,7 +220,7 @@
       <div class="swiper hot-deals-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="estate-details.html" class="card">
+            <a href="estate-details.ar.html" class="card">
               <div class="card-image">
                 <img src="assets/img/Rectangle 2.svg" alt="عقارات" />
               </div>
@@ -233,18 +232,18 @@
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="estate-details.html" class="card">
+            <a href="estate-details.ar.html" class="card">
               <div class="card-image">
                 <img src="assets/img/Rectangle 2 (1).svg" alt="عقارات" />
               </div>
               <div class="card-date">25 يناير 2025 . قراءة لمدة 10 دقائق</div>
               <div class="card-title">أوفيس إيبسوم يجب أن تكون مكتومًا. أنيق بشكل جيد</div>
-              <div class="card-desc">فقدان التناغم في المسار المالي للملفات. لجنة النقاش تعطي نظرة شاملة.</div>
+              <div class="card-desc">فقدان التناغم في المسار المالي للملفات. لجنة النقاش تعطي نظرة .</div>
               <div class="card-link">عرض التفاصيل</div>
             </a>
           </div>
           <div class="swiper-slide">
-            <a href="estate-details.html" class="card">
+            <a href="estate-details.ar.html" class="card">
               <div class="card-image">
                 <img src="assets/img/Rectangle 2 (2).svg" alt="عقارات" />
               </div>
@@ -435,22 +434,59 @@
   </script>
 
   <script>
-    function switchLang(lang) {
-      if (lang === 'ar') {
-        // عند اختيار اللغة العربية:
-        document.documentElement.setAttribute("dir", "rtl"); // تعيين اتجاه الصفحة لليمين إلى اليسار
-        document.documentElement.lang = "ar";                 // تعيين لغة الصفحة إلى العربية
-        document.body.classList.add("rtl");                   // إضافة الفئة الخاصة بـ RTL لجسم الصفحة
-        document.body.classList.remove("ltr");                // إزالة الفئة الخاصة بـ LTR إن وُجِدت
-      } else {
-        // عند اختيار اللغة الإنجليزية:
-        document.documentElement.setAttribute("dir", "ltr");  // تعيين اتجاه الصفحة لليسار إلى اليمين
-        document.documentElement.lang = "en";                 // تعيين لغة الصفحة إلى الإنجليزية
-        document.body.classList.add("ltr");                   // إضافة الفئة الخاصة بـ LTR
-        document.body.classList.remove("rtl");                // إزالة الفئة الخاصة بـ RTL
-      }
-    }
+    // تفعيل القائمة عند الضغط
+    const langToggle = document.querySelector(".lang-toggle");
+    const langDropdown = document.querySelector(".lang-dropdown");
 
+    langToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const isVisible = langDropdown.style.display === "block";
+      langDropdown.style.display = isVisible ? "none" : "block";
+    });
+
+    // إغلاق القائمة إذا ضغطت برّا
+    document.addEventListener("click", function (e) {
+      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.style.display = "none";
+      }
+    });
+
+    function switchLang(lang) {
+      const currentUrl = window.location.href;
+      const url = new URL(currentUrl);
+      const pathname = url.pathname;
+
+      let newPath;
+
+      if (lang === 'ar') {
+        document.documentElement.setAttribute("dir", "rtl");
+        document.body.classList.add("rtl");
+        document.body.classList.remove("ltr");
+
+        // التبديل للغة العربية حسب الصفحة
+        newPath = pathname
+          .replace("index.en.html", "index.html")
+          .replace("estate-details.html", "estate-details.ar.html")
+          .replace("contactus.html", "contactus.ar.html");
+
+      } else {
+        document.documentElement.setAttribute("dir", "ltr");
+        document.body.classList.add("ltr");
+        document.body.classList.remove("rtl");
+
+        // التبديل للغة الإنجليزية حسب الصفحة
+        newPath = pathname
+          .replace("index.html", "index.en.html")
+          .replace("estate-details.ar.html", "estate-details.html")
+          .replace("contactus.ar.html", "contactus.html");
+      }
+
+      // الانتقال إلى الرابط الجديد
+      window.location.href = newPath;
+
+      // إغلاق القائمة بعد اختيار اللغة
+      langDropdown.style.display = "none";
+    }
   </script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
@@ -468,7 +504,7 @@
       }
     });
   </script>
- 
+
 
 </body>
 

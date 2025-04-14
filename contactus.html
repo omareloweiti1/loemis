@@ -39,7 +39,7 @@
             <nav id="navbar" class="navbar order-2 order-lg-1">
                 <ul>
                     <li>
-                        <a class="nav-link scrollto active" href="#hero">Home</a>
+                        <a class="nav-link scrollto active" href="index.en.html">Home</a>
                     </li>
                     <li>
                         <a class="nav-link scrollto" href="#service">Service</a>
@@ -54,7 +54,7 @@
                         <a class="nav-link scrollto" href="article-en.html">Articles</a>
                     </li>
                     <li>
-                        <a class="nav-link scrollto" href="#contact">Contact</a>
+                        <a class="nav-link scrollto" href="contactus.html">Contact</a>
                     </li>
                     <div class="d-flex justify-content-center my-4">
                         <div class="social-links">
@@ -101,7 +101,7 @@
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img src="assets/img/Rectangle 1.png" class="d-none d-md-block w-100" alt="Web Image 1">
+                        <img src="assets/img/hero2e.jpg" class="d-none d-md-block w-100" alt="Web Image 1">
                         <!-- Image for Mobile -->
                         <img src="assets/img/Rectangle 1.png" class="d-block d-md-none w-100" alt="Mobile Image 1">
 
@@ -297,31 +297,53 @@
         // تفعيل القائمة عند الضغط
         const langToggle = document.querySelector(".lang-toggle");
         const langDropdown = document.querySelector(".lang-dropdown");
-    
+      
         langToggle.addEventListener("click", function (e) {
           e.preventDefault();
           const isVisible = langDropdown.style.display === "block";
           langDropdown.style.display = isVisible ? "none" : "block";
         });
-    
+      
         // إغلاق القائمة إذا ضغطت برّا
         document.addEventListener("click", function (e) {
           if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
             langDropdown.style.display = "none";
           }
         });
-    
+      
         function switchLang(lang) {
+          const currentUrl = window.location.href;
+          const url = new URL(currentUrl);
+          const pathname = url.pathname;
+      
+          let newPath;
+      
           if (lang === 'ar') {
             document.documentElement.setAttribute("dir", "rtl");
             document.body.classList.add("rtl");
             document.body.classList.remove("ltr");
+      
+            // التبديل للغة العربية حسب الصفحة
+            newPath = pathname
+              .replace("index.en.html", "index.html")
+              .replace("estate-details.html", "estate-details.ar.html")
+              .replace("contactus.html", "contactus.ar.html");
+      
           } else {
             document.documentElement.setAttribute("dir", "ltr");
             document.body.classList.add("ltr");
             document.body.classList.remove("rtl");
+      
+            // التبديل للغة الإنجليزية حسب الصفحة
+            newPath = pathname
+              .replace("index.html", "index.en.html")
+              .replace("estate-details.ar.html", "estate-details.html")
+              .replace("contactus.ar.html", "contactus.html");
           }
-    
+      
+          // الانتقال إلى الرابط الجديد
+          window.location.href = newPath;
+      
           // إغلاق القائمة بعد اختيار اللغة
           langDropdown.style.display = "none";
         }
