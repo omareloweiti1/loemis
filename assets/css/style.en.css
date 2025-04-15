@@ -1082,9 +1082,9 @@ header .logo-w img {
   color: white;
   margin: 0;
 }
-
 /* Form */
 .newsletter-form {
+  direction: rtl;
   width: 500px;
   height: 48px;
   display: flex;
@@ -1092,20 +1092,21 @@ header .logo-w img {
   align-items: stretch;
   margin: 10px auto 0 auto;
 }
-
 .newsletter-form input[type="email"] {
   width: 374px;
   height: 48px;
-  padding-left: 20px;
-  border: 1px solid rgba(255, 255, 255, 1);
+  padding-right: 20px;
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(4px);
   color: white;
   font-size: 16px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-right: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);  
+  border-top: 1px solid rgba(255, 255, 255, 1);  
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-left: none;  
 }
 
 .newsletter-form input::placeholder {
@@ -1118,17 +1119,20 @@ header .logo-w img {
   background-color: white;
   color: black;
   font-size: 16px;
-  border: 1px solid rgba(255, 255, 255, 1);
-  border-left: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
   outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);  
+  border-top: 1px solid rgba(255, 255, 255, 1);  
+  border-left: 1px solid rgba(255, 255, 255, 1);  
+  border-right: none;  
+ 
 }
 
 .newsletter-form button:hover {
-  background-color: rgba(29, 52, 76, 0);
+  background-color: rgba(29, 52, 76, 0)  ;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .newsletter {

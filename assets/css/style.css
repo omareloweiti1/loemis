@@ -951,53 +951,8 @@ header .logo-w img {
   margin: 0;
 }
 
-/* Form */
-.newsletter-form {
-  width: 500px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin: 10px auto 0 auto;
-}
+ 
 
-.newsletter-form input[type="email"] {
-  width: 374px;
-  height: 48px;
-  padding-left: 20px;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(4px);
-  color: white;
-  font-size: 16px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-right: none;
-  outline: none;
-}
-
-.newsletter-form input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.newsletter-form button {
-  height: 48px;
-  width: 126px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  border: 1px solid rgba(255, 255, 255, 1);
-  border-left: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  outline: none;
-}
-
-.newsletter-form button:hover {
-  background-color: rgba(29, 52, 76, 0);
-}
 
 /* End Newsletter Subscription Section */
 
@@ -1132,7 +1087,7 @@ body.ltr {
   text-align: left;
  }
 
-.newsletter-form input[type="email"] {
+/* .newsletter-form input[type="email"] {
   width: 374px;
   height: 48px;
   padding-left: 20px;
@@ -1153,7 +1108,7 @@ body.ltr {
   border-bottom-right-radius: 0;
   border-right: none;
   border-right: 1px solid rgba(255, 255, 255, 1);
-}
+} */
 
 .hot-deals {
   background-color: white;
@@ -1747,3 +1702,12 @@ body.ltr {
     transition: transform 0.3s ease;
   }
 }
+
+ 
+ 
+ 
+
+
+
+
+

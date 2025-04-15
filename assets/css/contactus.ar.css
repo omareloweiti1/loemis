@@ -31,28 +31,7 @@ body.ltr {
   text-align: left;
 }
 
-.newsletter-form input[type="email"] {
-  width: 374px;
-  height: 48px;
-  padding-left: 20px;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(4px);
-  color: white;
-  font-size: 16px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-left: none;
-  outline: none;
-}
-.newsletter-form button {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: none;
-  border-right: 1px solid rgba(255, 255, 255, 1);
-}
+ 
 
 /* mobile  */
 @media (max-width: 767px) {
