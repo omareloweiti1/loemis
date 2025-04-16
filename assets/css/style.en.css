@@ -1067,7 +1067,7 @@ header .logo-w img {
 
 /* Title */
 .newsletter-title {
-    font-weight: 600;
+  font-weight: 600;
   font-size: 36px;
   line-height: 100%;
   color: white;
@@ -1076,7 +1076,7 @@ header .logo-w img {
 
 /* Description */
 .newsletter-desc {
-    font-weight: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: white;
@@ -1103,10 +1103,10 @@ header .logo-w img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   outline: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 1);  
-  border-top: 1px solid rgba(255, 255, 255, 1);  
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
   border-right: 1px solid rgba(255, 255, 255, 1);
-  border-left: none;  
+  border-left: none;
 }
 
 .newsletter-form input::placeholder {
@@ -1124,15 +1124,14 @@ header .logo-w img {
   cursor: pointer;
   transition: background 0.3s ease;
   outline: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 1);  
-  border-top: 1px solid rgba(255, 255, 255, 1);  
-  border-left: 1px solid rgba(255, 255, 255, 1);  
-  border-right: none;  
- 
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  border-right: none;
 }
 
 .newsletter-form button:hover {
-  background-color: rgba(29, 52, 76, 0)  ;
+  background-color: rgba(29, 52, 76, 0);
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .newsletter {
@@ -1307,7 +1306,7 @@ body.rtl {
 
 body.ltr {
   text-align: left;
-  }
+}
 
 /* ==== media ===== */
 /* mobile  */
@@ -1404,7 +1403,7 @@ body.ltr {
   .section-title {
     width: 285px;
     height: 44px;
-        font-weight: 500;
+    font-weight: 500;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1414,7 +1413,7 @@ body.ltr {
   .section-description {
     width: 690px;
     height: 19px;
-        font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1457,7 +1456,7 @@ body.ltr {
   .card-date {
     width: 312px;
     height: 19px;
-        font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1467,7 +1466,7 @@ body.ltr {
   .card-title {
     width: 282px;
     height: 48px;
-        font-weight: 600;
+    font-weight: 600;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1478,7 +1477,7 @@ body.ltr {
   .card-desc {
     width: 282px;
     height: 57px;
-        font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1489,7 +1488,7 @@ body.ltr {
   .card-link {
     width: 200px;
     height: 50px;
-        font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1516,7 +1515,7 @@ body.ltr {
     margin-left: 0;
     text-align: right;
   }
-
+   
   .featured-event p {
     width: 100%;
     font-size: 15px;
@@ -1675,5 +1674,10 @@ body.ltr {
 
   .logo-section {
     margin-top: 0 !important;
+  }
+}
+@media (max-width: 991px) {
+  .navbar ul {
+    padding-top: 100px;
   }
 }

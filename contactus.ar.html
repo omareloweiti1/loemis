@@ -76,31 +76,29 @@
               طلب استشارة
             </a>
           </li>
-          <li class="d-lg-none text-center mt-3">
-            <div class="dropdown language-switcher d-inline-block">
-              <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
-              </button>
-              <ul class="dropdown-menu lang-dropdown">
-                <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-                <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
-              </ul>
-            </div>
+          <li class="nav-item dropdown d-lg-none mt-3" style="text-align: center;">
+            <a class="btn  lang-toggle" href="#" id="langDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-flex; align-items: center; justify-content: center;">
+             EN <i class="bi bi-chevron-down lang-icon ms-1" style="margin-top: 2px; font-size: 12px;"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="langDropdownMobile" style="text-align: start; margin: 0 auto;">
+              <li><a class="dropdown-item" href="contactus.ar.html">العربية</a></li>
+              <li><a class="dropdown-item" href="contactus.html">English</a></li>
+            </ul>
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle" style="margin-right: 370px; margin-top: -10px;"></i>
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
         <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
         <div class="dropdown language-switcher">
-          <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn lang-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
             EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
           </button>
           <ul class="dropdown-menu lang-dropdown">
-            <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-            <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+            <li><a class="dropdown-item" href="contactus.ar.html">العربية</a></li>
+            <li><a class="dropdown-item" href="contactus.html">English</a></li>
           </ul>
         </div>
       </div>
@@ -116,8 +114,8 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
-            <img src="assets/img/hero2e.jpg" class="d-none d-md-block w-100" alt="صورة الويب 1">
-            <img src="assets/img/Rectangle 1.png" class="d-block d-md-none w-100" alt="صورة الجوال 1">
+            <img src="assets/img/general/hero2e.jpg" class="d-none d-md-block w-100" alt="صورة الويب 1">
+            <img src="assets/img/general/Rectangle1.png" class="d-block d-md-none w-100" alt="صورة الجوال 1">
 
             <div class="carousel-container" dir="rtl">
               <div class="container text-end" dir="rtl">
@@ -131,24 +129,6 @@
               </div>
             </div>
           </div>
-
-          <div class="carousel-item">
-            <img src="assets/img/hero-carousel/banner1.png" class="d-none d-md-block w-100" alt="صورة الويب 2">
-            <img src="assets/img/hero-carousel/hero.png" class="d-block d-md-none w-100" alt="صورة الجوال 2">
-
-            <div class="carousel-container">
-              <div class="container text-end">
-                <h2 class="animate__animated animate__fadeInDown">
-                  البقاء على تواصل مع عالم العقارات
-                </h2>
-                <p class="animate__animated animate__fadeInUp">
-                  من لقاءات المطورين وفعاليات التواصل إلى حفلات الإطلاق الحصرية، نحن نشكل مستقبل سوق العقارات في دبي
-                  بنشاط.
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -157,13 +137,13 @@
 
   <!-- ======= logo-section======= -->
   <section class="logo-section">
-    <img src="assets/img/Logo_Netflix.svg" alt="شعار Netflix">
-    <img src="assets/img/Logo_Netflix2.svg" alt="شعار Netflix 2">
-    <img src="assets/img/Logo_Netflix.svg" alt="شعار Netflix">
-    <img src="assets/img/Logo_Netflix2.svg" alt="شعار Netflix 2">
-    <img src="assets/img/Logo_Netflix.svg" alt="شعار Netflix">
-    <img src="assets/img/Logo_Netflix2.svg" alt="شعار Netflix 2">
-    <img src="assets/img/Logo_Netflix.svg" alt="شعار Netflix">
+    <img src="assets/img/logocompanies/Logo_Netflix2.png" alt="شعار Netflix">
+    <img src="assets/img/logocompanies/Logo_Netflix.png" alt="شعار Netflix 2">
+    <img src="assets/img/logocompanies/Logo_Netflix2.png" alt="شعار Netflix">
+    <img src="assets/img/logocompanies/Logo_Netflix.png" alt="شعار Netflix 2">
+    <img src="assets/img/logocompanies/Logo_Netflix2.png" alt="شعار Netflix">
+    <img src="assets/img/logocompanies/Logo_Netflix.png" alt="شعار Netflix 2">
+    <img src="assets/img/logocompanies/Logo_Netflix2.png" alt="شعار Netflix">
   </section>
   <!-- End logo-section-->
 
@@ -241,7 +221,7 @@
 
   <!-- ======= newsletter  section ======= -->
   <section class="newsletter" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/img/newletter.png') center center/cover no-repeat;">
+    url('assets/img/general/newletter.png') center center/cover no-repeat;">
     <div class="overlay">
       <h2 class="newsletter-title">أحدث الأخبار والتحديثات</h2>
       <p class="newsletter-desc">
@@ -293,59 +273,9 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <!-- Main JS: Your custom site logic and interactivity -->
   <script src="assets/js/main.js"></script>
-  <!-- Language Toggle Script: Handles language dropdown and URL switching -->
-  <script>
-    const langToggles = document.querySelectorAll(".lang-toggle");
-    const langDropdowns = document.querySelectorAll(".lang-dropdown");
-
-    // Add toggle event to each language toggle button
-    langToggles.forEach((toggle, index) => {
-      const dropdown = langDropdowns[index];
-      toggle.addEventListener("click", function (e) {
-        e.preventDefault();
-        const isVisible = dropdown.style.display === "block";
-        dropdown.style.display = isVisible ? "none" : "block";
-      });
-
-      // Hide dropdown on clicking outside
-      document.addEventListener("click", function (e) {
-        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-          dropdown.style.display = "none";
-        }
-      });
-    });
-
-    function switchLang(lang) {
-      const currentUrl = window.location.href;
-      const url = new URL(currentUrl);
-      const pathname = url.pathname;
-
-      let newPath;
-
-      if (lang === 'ar') {
-        document.documentElement.setAttribute("dir", "rtl");
-        document.body.classList.add("rtl");
-        document.body.classList.remove("ltr");
-
-        newPath = pathname
-          .replace("index.en.html", "index.html")
-          .replace("estate-details.html", "estate-details.ar.html")
-          .replace("contactus.html", "contactus.ar.html");
-      } else {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.body.classList.add("ltr");
-        document.body.classList.remove("rtl");
-
-        newPath = pathname
-          .replace("index.html", "index.en.html")
-          .replace("estate-details.ar.html", "estate-details.html")
-          .replace("contactus.ar.html", "contactus.html");
-      }
-
-      window.location.href = newPath;
-    }
-
-  </script>
+    <!-- Language Toggle Script: Dropdown behavior and page language switching -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

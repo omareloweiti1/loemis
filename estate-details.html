@@ -80,20 +80,17 @@
                             Request a consultation
                         </a>
                     </li>
-                    <li class="d-lg-none text-center mt-3">
-                        <div class="dropdown language-switcher d-inline-block">
-                            <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
-                            </button>
-                            <ul class="dropdown-menu lang-dropdown">
-                                <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li class="nav-item dropdown d-lg-none mt-3" style="text-align: center;">
+                        <a class="btn  lang-toggle" href="#" id="langDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-flex; align-items: center; justify-content: center;">
+                          AR <i class="bi bi-chevron-down lang-icon ms-1" style="margin-top: 2px; font-size: 12px;"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="langDropdownMobile" style="text-align: start; margin: 0 auto;">
+                          <li><a class="dropdown-item" href="estate-details.ar.html">العربية</a></li>
+                          <li><a class="dropdown-item" href="estate-details.html">English</a></li>
+                        </ul>
+                      </li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                <i class="bi bi-list mobile-nav-toggle" style="margin-top: -10px;"></i>
             </nav>
 
             <!-- Desktop Only: Request + Language -->
@@ -102,28 +99,25 @@
                     Request a consultation
                 </a>
                 <div class="dropdown language-switcher">
-                    <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
+                    <button class="btn lang-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      AR <i class="bi bi-chevron-down lang-icon ms-1"></i>
                     </button>
                     <ul class="dropdown-menu lang-dropdown">
-                        <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+                      <li><a class="dropdown-item" href="estate-details.ar.html">العربية</a></li>
+                      <li><a class="dropdown-item" href="estate-details.html">English</a></li>
                     </ul>
-                </div>
+                  </div>
             </div>
         </div>
     </header>
 
 
     <!-- End Header -->
-    <br>
-    <br>
-    <br>
-    <br>
+   
 
     <!-- ======= hero Section ======= -->
     <section class="hero-section" style="  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.884)),
-    url('assets/img/hero2e.jpg') center center/cover no-repeat;">
+    url('assets/img/general/hero2e.jpg') center center/cover no-repeat;">
         <div class="hero-content">
             <div class="text-area" data-aos="fade-right">
                 <h2>Our Collaborations with <br>Industry Giants</h2>
@@ -133,15 +127,15 @@
                 <a href="contactus.html" class="cta-button">Contact Us</a>
             </div>
 
-            <div class="phone-area" data-aos="fade-left">
+            <div class="phone-area" data-aos="fade-left" style=" background: url('assets/img/phone/Image.png') center center/contain no-repeat;">
                 <div class="iphone-frame">
                     <div class="video-wrapper">
-                        <video id="myVideo" src="assets/img/191518-890528350.mp4" autoplay muted loop
+                        <video id="myVideo" src="assets/img/video/real.mp4" autoplay  loop
                             playsinline></video>
                         <div class="pause-overlay" id="pauseOverlay">
-                            <img src="assets/img/svgexport-15 (43) 4 (1).png" alt="Pause Icon" />
+                            <img src="assets/img/phone/Group.png" alt="Pause Icon" />
                         </div>
-                        <img class="notch-overlay" src="assets/img/ip14.png" alt="notch" />
+                        <img class="notch-overlay" src="assets/img/phone/ip14.png" alt="notch" />
                     </div>
                 </div>
             </div>
@@ -191,10 +185,10 @@
         </div>
 
         <div id="imageSource" style="display: none;">
-            <img src="assets/img/one2.jpg " alt="">
-            <img src="assets/img/two2.jpg " alt="">
-            <img src="assets/img/threre2.jpg " alt="">
-            <img src="assets/img/four2.jpg " alt="">
+            <img src="assets/img/general/one2.jpg " alt="">
+            <img src="assets/img/general/two2.jpg " alt="">
+            <img src="assets/img/general/threre2.jpg " alt="">
+            <img src="assets/img/general/four2.jpg " alt="">
         </div>
     </section>
 
@@ -203,21 +197,20 @@
     <!-- experience-section -->
 
 
-    <!-- ======= Featured Event Section ======= -->
+    <!-- =======  Event Section ======= -->
     <section class="featured-event">
         <h2>A Proud Moment: Engaging with Al Habtoor Group – A True Real Estate Powerhouse</h2>
         <p>Our team had the honor of attending an exclusive developer event hosted by the Al Habtoor Group – a leading
             name in the UAE’s real estate and hospitality industry.</p>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196 (1).svg" alt="Event Image" />
+            <img src="assets/img/general/Rectangl.png" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
-        <!-- <a href="#" class="event-link">View Event Details</a> -->
     </section>
 
     <!-- End Featured Event Section -->
 
-    <!-- ======= Featured Event Section ======= -->
+    <!-- =======  Event Section ======= -->
     <section class="featured-event">
         <h2>About the Developer: Al Habtoor Group</h2>
         <p>The Al Habtoor Group, established in 1970, has evolved into one of the UAE’s most respected conglomerates.
@@ -226,7 +219,7 @@
             division includes iconic developments such as the Al Habtoor Tower and The Residences, Al Habtoor Grand –
             hallmarks of luxury living.</p>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196.svg" alt="Event Image" />
+            <img src="assets/img/general/Rect.png" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
     </section>
@@ -234,7 +227,7 @@
     <!-- End Featured Event Section -->
 
 
-    <!-- ======= Featured Event Section ======= -->
+    <!-- =======  Event Section ======= -->
     <section class="featured-event">
         <h2>Inside the Event: A Gathering of Visionaries</h2>
         <p>Our visit to the Al Habtoor Group’s developer event was a remarkable experience that gave us insight into the
@@ -242,7 +235,7 @@
             developers, and partners to exchange ideas, showcase upcoming projects, and explore potential
             collaborations collaborations.</p>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 196 (1).svg" alt="Event Image" />
+            <img src="assets/img/general/pepole.png" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
         <!-- <a href="#" class="event-link">View Event Details</a> -->
@@ -251,7 +244,7 @@
     <!-- End Featured Event Section -->
 
 
-    <!-- ======= Featured Event Section ======= -->
+    <!-- =======  Event Section ======= -->
     <section class="featured-event">
         <h2>What We Gained from the Experience</h2>
         <ul class="gain-list">
@@ -265,7 +258,7 @@
             </li>
         </ul>
         <div class="image-wrapper">
-            <img src="assets/img/Rectangle 1.png" alt="Event Image" />
+            <img src="assets/img/general/Rectangle1.png" alt="Event Image" />
             <div class="blue-box"></div>
         </div>
     </section>
@@ -274,19 +267,19 @@
 
 
 
-    <!-- ======= Featured Event Section ======= -->
+    <!-- =======  Event Section ======= -->
     <section class="featured-event">
         <h2>Partnering with the Best to Deliver the Best</h2>
         <p>By aligning with leading developers like Al Habtoor Group, we continue to position ourselves at the forefront
             of Dubai’s thriving real estate landscape. Our goal is to provide our clients with access to the most
             prestigious projects in the market, backed by strong relationships and industry trust.</p>
         <div class="image-wrappers">
-            <img src="assets/img/Logo_Netflix.svg" alt="Event Image" />
+            <img src="assets/img/logocompanies/Logo_Netflix.png" alt="Event Image" />
         </div>
         <!-- <a href="#" class="event-link">View Event Details</a> -->
     </section>
 
-    <!-- End Featured Event Section -->
+    <!-- End  Event Section -->
 
 
 
@@ -314,7 +307,7 @@
                     <div class="swiper-slide">
                         <a href="estate-details.html" class="card">
                             <div class="card-image">
-                                <img src="assets/img/Rectangle 2.svg" alt="Real Estate" />
+                                <img src="assets/img/cards/card (1).png" alt="Real Estate" />
                             </div>
                             <div class="card-date">25 Jan 2025 · 10 min Read</div>
                             <div class="card-title">Office ipsum you must be muted. Sexy well</div>
@@ -328,7 +321,7 @@
                     <div class="swiper-slide">
                         <a href="estate-details.html" class="card">
                             <div class="card-image">
-                                <img src="assets/img/Rectangle 2 (1).svg" alt="Real Estate" />
+                                <img src="assets/img/cards/card (6).png" alt="Real Estate" />
                             </div>
                             <div class="card-date">25 Jan 2025 · 10 min Read</div>
                             <div class="card-title">Office ipsum you must be muted. Sexy well</div>
@@ -343,7 +336,7 @@
                     <div class="swiper-slide">
                         <a href="estate-details.html" class="card">
                             <div class="card-image">
-                                <img src="assets/img/Rectangle 2 (2).svg" alt="Real Estate" />
+                                <img src="assets/img/cards/card (3).png" alt="Real Estate" />
                             </div>
                             <div class="card-date">25 Jan 2025 · 10 min Read</div>
                             <div class="card-title">Office ipsum you must be muted. Sexy well</div>
@@ -365,7 +358,7 @@
 
     <!-- =======  Newsletter Subscription Section ======= -->
     <section class="newsletter" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/img/newletter.png') center center/cover no-repeat;">
+    url('assets/img/general/newletter.png') center center/cover no-repeat;">
         <div class="overlay">
             <h2 class="newsletter-title">Interested in Al Habtoor’s Projects?</h2>
             <p class="newsletter-desc">
@@ -412,7 +405,7 @@
 
 
     <!-- Bootstrap Bundle: Includes Popper + Bootstrap JS for responsive components -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <!-- Main JS: Your custom JavaScript logic -->
     <script src="assets/js/main.js"></script>
     <!-- AOS (Animate On Scroll) from CDN: Adds smooth scroll-triggered animations -->
@@ -563,58 +556,8 @@
         });
     </script>
     <!-- Language Toggle Script: Dropdown behavior and page language switching -->
-    <script>
-        const langToggles = document.querySelectorAll(".lang-toggle");
-        const langDropdowns = document.querySelectorAll(".lang-dropdown");
 
-        // Add toggle event to each language toggle button
-        langToggles.forEach((toggle, index) => {
-            const dropdown = langDropdowns[index];
-            toggle.addEventListener("click", function (e) {
-                e.preventDefault();
-                const isVisible = dropdown.style.display === "block";
-                dropdown.style.display = isVisible ? "none" : "block";
-            });
-
-            // Hide dropdown on clicking outside
-            document.addEventListener("click", function (e) {
-                if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                    dropdown.style.display = "none";
-                }
-            });
-        });
-
-        function switchLang(lang) {
-            const currentUrl = window.location.href;
-            const url = new URL(currentUrl);
-            const pathname = url.pathname;
-
-            let newPath;
-
-            if (lang === 'ar') {
-                document.documentElement.setAttribute("dir", "rtl");
-                document.body.classList.add("rtl");
-                document.body.classList.remove("ltr");
-
-                newPath = pathname
-                    .replace("index.en.html", "index.html")
-                    .replace("estate-details.html", "estate-details.ar.html")
-                    .replace("contactus.html", "contactus.ar.html");
-            } else {
-                document.documentElement.setAttribute("dir", "ltr");
-                document.body.classList.add("ltr");
-                document.body.classList.remove("rtl");
-
-                newPath = pathname
-                    .replace("index.html", "index.en.html")
-                    .replace("estate-details.ar.html", "estate-details.html")
-                    .replace("contactus.ar.html", "contactus.html");
-            }
-
-            window.location.href = newPath;
-        }
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

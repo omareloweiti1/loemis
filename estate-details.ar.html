@@ -78,44 +78,40 @@
               طلب استشارة
             </a>
           </li>
-          <li class="d-lg-none text-center mt-3">
-            <div class="dropdown language-switcher d-inline-block">
-              <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
-              </button>
-              <ul class="dropdown-menu lang-dropdown">
-                <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-                <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
-              </ul>
-            </div>
+          <li class="nav-item dropdown d-lg-none mt-3" style="text-align: center;">
+            <a class="btn  lang-toggle" href="#" id="langDropdownMobile" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="display: inline-flex; align-items: center; justify-content: center;">
+              EN <i class="bi bi-chevron-down lang-icon ms-1" style="margin-top: 2px; font-size: 12px;"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="langDropdownMobile" style="text-align: start; margin: 0 auto;">
+              <li><a class="dropdown-item" href="estate-details.ar.html">العربية</a></li>
+              <li><a class="dropdown-item" href="estate-details.html">English</a></li>
+            </ul>
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle" style="margin-top: -10px;"></i>
       </nav>
       <div class="d-none d-lg-flex align-items-center gap-2 order-1 order-lg-2">
         <a href="contactus.ar.html" class="btn btn-outline-dark">
           طلب استشارة
         </a>
         <div class="dropdown language-switcher">
-          <button class="btn lang-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn lang-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
             EN <i class="bi bi-chevron-down lang-icon ms-1"></i>
           </button>
           <ul class="dropdown-menu lang-dropdown">
-            <li><a class="dropdown-item" href="#" onclick="switchLang('ar')">العربية</a></li>
-            <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+            <li><a class="dropdown-item" href="estate-details.ar.html">العربية</a></li>
+            <li><a class="dropdown-item" href="estate-details.html">English</a></li>
           </ul>
         </div>
       </div>
     </div>
   </header>
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <!-- ======= hero Section ======= -->
   <section class="hero-section" style="  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.884)),
-    url('assets/img/hero2e.jpg') center center/cover no-repeat;">
+    url('assets/img/general/hero2e.jpg') center center/cover no-repeat;">
     <div class="hero-content">
       <div class="text-area" data-aos="fade-right">
         <h2>تعاوناتنا مع<br>عمالقة الصناعة</h2>
@@ -126,14 +122,15 @@
         <a href="contactus.ar.html" class="cta-button">اتصل بنا</a>
       </div>
 
-      <div class="phone-area" data-aos="fade-left">
+      <div class="phone-area" data-aos="fade-left"
+        style="background: url('assets/img/phone/Image.png') center center/contain no-repeat;">
         <div class="iphone-frame">
           <div class="video-wrapper">
-            <video id="myVideo" src="assets/img/191518-890528350.mp4" autoplay muted loop playsinline></video>
+            <video id="myVideo" src="assets/img/video/real.mp4" autoplay muted loop playsinline></video>
             <div class="pause-overlay" id="pauseOverlay">
-              <img src="assets/img/svgexport-15 (43) 4 (1).png" alt="أيقونة الإيقاف" />
+              <img src="assets/img/phone/Group.png" alt="أيقونة الإيقاف" />
             </div>
-            <img class="notch-overlay" src="assets/img/ip14.png" alt="notch" />
+            <img class="notch-overlay" src="assets/img/phone/ip14.png" alt="notch" />
           </div>
         </div>
       </div>
@@ -157,10 +154,10 @@
     </div>
 
     <div id="imageSource" style="display: none;">
-      <img src="assets/img/one2.jpg " alt="">
-      <img src="assets/img/two2.jpg " alt="">
-      <img src="assets/img/threre2.jpg " alt="">
-      <img src="assets/img/four2.jpg " alt="">
+      <img src="assets/img/general/one2.jpg " alt="">
+      <img src="assets/img/general/two2.jpg " alt="">
+      <img src="assets/img/general/threre2.jpg " alt="">
+      <img src="assets/img/general/four2.jpg " alt="">
     </div>
   </section>
 
@@ -169,7 +166,7 @@
     <p>حظي فريقنا بشرف حضور حدث حصري للمطورين استضافته مجموعة الحبتور - الاسم الرائد في قطاع العقارات والضيافة في
       الإمارات.</p>
     <div class="image-wrapper">
-      <img src="assets/img/Rectangle 196.svg" alt="صورة الحدث" />
+      <img src="assets/img/general/Rectangl.png" alt="صورة الحدث" />
       <div class="blue-box"></div>
     </div>
     <!-- <a href="#" class="event-link">عرض تفاصيل الحدث</a> -->
@@ -184,7 +181,7 @@
       الحبتور جراند - وهي رموز للمعيشة الفاخرة.
     </p>
     <div class="image-wrapper">
-      <img src="assets/img/Rectangle 196.svg" alt="صورة الحدث" />
+      <img src="assets/img/general/Rect.png" alt="صورة الحدث" />
       <div class="blue-box"></div>
     </div>
   </section>
@@ -196,7 +193,7 @@
       الحدث أفضل خبراء العقارات، المطورين، والشركاء لتبادل الأفكار، عرض المشاريع القادمة، واستكشاف فرص التعاون المحتملة.
     </p>
     <div class="image-wrapper">
-      <img src="assets/img/Rectangle 196.svg" alt="صورة الحدث" />
+      <img src="assets/img/general/pepole.png" alt="صورة الحدث" />
       <div class="blue-box"></div>
     </div>
   </section>
@@ -210,7 +207,7 @@
       <li>أكدنا التزامنا بالجودة والابتكار والشراكات القوية</li>
     </ul>
     <div class="image-wrapper">
-      <img src="assets/img/Rectangle 196.svg" alt="صورة الحدث" />
+      <img src="assets/img/general/Rectangle1.png" alt="صورة الحدث" />
       <div class="blue-box"></div>
     </div>
   </section>
@@ -222,7 +219,7 @@
       هدفنا هو توفير لعملائنا الوصول إلى أرقى المشاريع في السوق، مدعومين بعلاقات قوية وثقة صناعية.
     </p>
     <div class="image-wrappers">
-      <img src="assets/img/Logo_Netflix.svg" alt="صورة الحدث" />
+      <img src="assets/img/logocompanies/Logo_Netflix.png" alt="صورة الحدث" />
     </div>
   </section>
 
@@ -239,7 +236,7 @@
           <div class="swiper-slide">
             <a href="estate-details.ar.html" class="card">
               <div class="card-image" style="margin: 5px;">
-                <img src="assets/img/Rectangle 2.svg" alt="عقارات" />
+                <img src="assets/img/cards/card (1).png" alt="عقارات" />
               </div>
               <div class="card-date">25 يناير 2025 . قراءة لمدة 10 دقائق</div>
               <div class="card-title">أوفيس إيبسوم يجب أن تكون مكتومًا. أنيق بشكل جيد</div>
@@ -250,8 +247,8 @@
           </div>
           <div class="swiper-slide">
             <a href="estate-details.ar.html" class="card">
-              <div class="card-image"style="margin: 5px;">
-                <img src="assets/img/Rectangle 2 (1).svg" alt="عقارات" />
+              <div class="card-image" style="margin: 5px;">
+                <img src="assets/img/cards/card (6).png" alt="عقارات" />
               </div>
               <div class="card-date">25 يناير 2025 . قراءة لمدة 10 دقائق</div>
               <div class="card-title">أوفيس إيبسوم يجب أن تكون مكتومًا. أنيق بشكل جيد</div>
@@ -261,8 +258,8 @@
           </div>
           <div class="swiper-slide">
             <a href="estate-details.ar.html" class="card">
-              <div class="card-image"style="margin: 5px;">
-                <img src="assets/img/Rectangle 2 (3).svg" alt="عقارات" />
+              <div class="card-image" style="margin: 5px;">
+                <img src="assets/img/cards/card (3).png" alt="عقارات" />
               </div>
               <div class="card-date">25 يناير 2025 . قراءة لمدة 10 دقائق</div>
               <div class="card-title">أوفيس إيبسوم يجب أن تكون مكتومًا. أنيق بشكل جيد</div>
@@ -279,7 +276,7 @@
 
 
   <section class="newsletter" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/img/newletter.png') center center/cover no-repeat;">
+    url('assets/img/general/newletter.png') center center/cover no-repeat;">
     <div class="overlay">
       <h2 class="newsletter-title">هل أنت مهتم بمشاريع الحبتور؟</h2>
       <p class="newsletter-desc">
@@ -315,12 +312,17 @@
       </div>
     </div>
   </footer>
+
+
   <!-- Bootstrap Bundle: Includes Popper + Bootstrap JS for responsive components -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
   <!-- Main JS: Your custom JavaScript logic -->
   <script src="assets/js/main.js"></script>
+
   <!-- AOS (Animate On Scroll) from CDN: Adds smooth scroll-triggered animations -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   <!-- AOS Initialization  Animation -->
   <script>
     AOS.init({
@@ -329,6 +331,7 @@
       offset: 120,
     });
   </script>
+
   <!-- Video Click-to-Pause Logic -->
   <script>
     const video = document.getElementById("myVideo");
@@ -343,6 +346,7 @@
       }
     });
   </script>
+
   <!-- Responsive Slider Script: Adapts image layout based on screen size -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -441,113 +445,29 @@
       loadImagesAndInit();
     });
   </script>
+
   <!-- Language Toggle Script: Dropdown behavior and page language switching -->
-  <script>
-    const langToggle = document.querySelector(".lang-toggle");
-    const langDropdown = document.querySelector(".lang-dropdown");
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    langToggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const isVisible = langDropdown.style.display === "block";
-      langDropdown.style.display = isVisible ? "none" : "block";
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-        langDropdown.style.display = "none";
-      }
-    });
-
-    function switchLang(lang) {
-      const currentUrl = window.location.href;
-      const url = new URL(currentUrl);
-      const pathname = url.pathname;
-
-      let newPath;
-
-      if (lang === 'ar') {
-        document.documentElement.setAttribute("dir", "rtl");
-        document.body.classList.add("rtl");
-        document.body.classList.remove("ltr");
-
-        newPath = pathname
-          .replace("index.en.html", "index.html")
-          .replace("estate-details.html", "estate-details.ar.html")
-          .replace("contactus.html", "contactus.ar.html");
-
-      } else {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.body.classList.add("ltr");
-        document.body.classList.remove("rtl");
-
-        newPath = pathname
-          .replace("index.html", "index.en.html")
-          .replace("estate-details.ar.html", "estate-details.html")
-          .replace("contactus.ar.html", "contactus.html");
-      }
-
-      window.location.href = newPath;
-
-      langDropdown.style.display = "none";
-    }
-  </script>
   <!-- Swiper CSS: Styles for the Swiper slider -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <!-- Swiper JS: Initializes a horizontal scrollable slider -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
   <!-- Swiper Slider Initialization: Creates scrollable carousel for .hot-deals-swiper section -->
   <script>
-    const langToggles = document.querySelectorAll(".lang-toggle");
-    const langDropdowns = document.querySelectorAll(".lang-dropdown");
-
-    // Add toggle event to each language toggle button
-    langToggles.forEach((toggle, index) => {
-        const dropdown = langDropdowns[index];
-        toggle.addEventListener("click", function (e) {
-            e.preventDefault();
-            const isVisible = dropdown.style.display === "block";
-            dropdown.style.display = isVisible ? "none" : "block";
-        });
-
-        // Hide dropdown on clicking outside
-        document.addEventListener("click", function (e) {
-            if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                dropdown.style.display = "none";
-            }
-        });
+    const swiper = new Swiper(".hot-deals-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
     });
+  </script>
 
-    function switchLang(lang) {
-        const currentUrl = window.location.href;
-        const url = new URL(currentUrl);
-        const pathname = url.pathname;
-
-        let newPath;
-
-        if (lang === 'ar') {
-            document.documentElement.setAttribute("dir", "rtl");
-            document.body.classList.add("rtl");
-            document.body.classList.remove("ltr");
-
-            newPath = pathname
-                .replace("index.en.html", "index.html")
-                .replace("estate-details.html", "estate-details.ar.html")
-                .replace("contactus.html", "contactus.ar.html");
-        } else {
-            document.documentElement.setAttribute("dir", "ltr");
-            document.body.classList.add("ltr");
-            document.body.classList.remove("rtl");
-
-            newPath = pathname
-                .replace("index.html", "index.en.html")
-                .replace("estate-details.ar.html", "estate-details.html")
-                .replace("contactus.ar.html", "contactus.html");
-        }
-
-        window.location.href = newPath;
-    }
-
-</script>
 
 
 </body>
