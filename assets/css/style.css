@@ -653,13 +653,12 @@ header .logo-w img {
   position: relative;
   max-width: 1250px;
   margin: 0 auto;
-  height: 900px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: white;
+  background-color: rgba(246, 246, 246, 1);
   align-items: center;
-  margin-top: 150px;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -935,7 +934,7 @@ header .logo-w img {
 
 /* Title */
 .newsletter-title {
-   font-weight: 600;
+  font-weight: 600;
   font-size: 36px;
   line-height: 100%;
   color: white;
@@ -944,15 +943,12 @@ header .logo-w img {
 
 /* Description */
 .newsletter-desc {
-   font-weight: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: white;
   margin: 0;
 }
-
- 
-
 
 /* End Newsletter Subscription Section */
 
@@ -1085,7 +1081,7 @@ body.rtl {
 
 body.ltr {
   text-align: left;
- }
+}
 
 /* .newsletter-form input[type="email"] {
   width: 374px;
@@ -1289,25 +1285,27 @@ body.ltr {
 
 @media (max-width: 767px) {
   .featured-event {
-    height: auto;
-    padding: 20px 15px;
-    margin-top: 50px;
+    height: 300px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: -20px;
     gap: 20px;
   }
-
   .featured-event h2 {
     width: 100%;
-    font-size: 24px;
+    font-size: 36px;
     margin-left: 0;
     text-align: right;
+    margin-bottom: 50px;
   }
 
   .featured-event p {
     width: 100%;
-    font-size: 14px;
-    margin-top: -40px;
+    font-size: 16px;
+    margin-top: -20px;
     margin-left: 0;
     text-align: right;
+    margin-left: 5px;
   }
 
   .image-wrapper {
@@ -1316,7 +1314,7 @@ body.ltr {
   }
 
   .featured-event img {
-    height: auto;
+    height: 150px;
     max-height: 300px;
     border-radius: 2px;
   }
@@ -1338,22 +1336,22 @@ body.ltr {
 @media (min-width: 768px) and (max-width: 1024px) {
   .featured-event {
     width: 700px;
-    height: auto;
-    padding: 30px 25px;
-    margin-top: 100px;
+    height: 450px;
+    padding: 10px 25px;
+    /* margin-top: 100px; */
     gap: 30px;
   }
 
   .featured-event h2 {
     width: 100%;
-    font-size: 28px;
+    font-size: 36px;
     margin-left: 0;
     text-align: right;
   }
 
   .featured-event p {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: -40px;
     margin-left: 0;
     text-align: right;
@@ -1516,23 +1514,26 @@ body.ltr {
   .section-title {
     width: 690px;
     height: 44px;
-       font-weight: 500;
+    font-weight: 500;
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0;
     color: rgba(0, 0, 0, 1);
+    text-align: right;
   }
 
   .section-description {
     width: 690px;
     height: 19px;
-       font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
     color: #555;
     margin-top: 20px;
     margin-bottom: 40px;
+    text-align: right;
+
   }
 
   .cards-wrapper {
@@ -1569,7 +1570,7 @@ body.ltr {
   .card-date {
     width: 312px;
     height: 19px;
-       font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1579,7 +1580,7 @@ body.ltr {
   .card-title {
     width: 282px;
     height: 48px;
-       font-weight: 600;
+    font-weight: 600;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: 0;
@@ -1589,7 +1590,7 @@ body.ltr {
   .card-desc {
     width: 282px;
     height: 57px;
-       font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0;
@@ -1601,7 +1602,7 @@ body.ltr {
   .card-link {
     width: 200px;
     height: 50px;
-       font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0;
@@ -1615,7 +1616,7 @@ body.ltr {
 @media (max-width: 768px) {
   #hero {
     height: auto;
-    padding: 278px 26px;
+    padding: 250px 26px;
   }
 
   #hero .carousel-item img {
@@ -1702,12 +1703,3 @@ body.ltr {
     transition: transform 0.3s ease;
   }
 }
-
- 
- 
- 
-
-
-
-
-

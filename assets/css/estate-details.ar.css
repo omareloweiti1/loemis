@@ -31,7 +31,7 @@
     color: #000;
     margin: 0 auto;
   }
-
+ 
   .featured-event p {
     width: 500px;
     height: auto;
@@ -607,12 +607,12 @@ body.rtl .dots {
     right: auto;
   }
 }
-
+ 
 /* media */
 @media (max-width: 767px) {
   .experience-slider-section {
     margin-top: 300px;
-    padding: 0 20px;
+    padding: 30px;
   }
 
   .custom-container {
@@ -714,3 +714,45 @@ body.rtl .dots {
   font-size: 14px;
   padding: 5px 10px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-eventee1 {
+    width: 700px;
+    height: 600px;
+    padding: 10px 25px;
+    gap: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event2 {
+    width: 700px;
+    height: 600px;
+    padding: 10px 25px;
+    gap: 30px;
+  }
+}
+ @media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event3 {
+    width: 700px;
+    height: 600px;
+    padding: 10px 25px;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event4 {
+    width: 700px;
+    height: 700px;
+    padding: 10px 25px;
+    gap: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .featured-event5 {
+    width: 700px;
+    height: 400px;
+    padding: 10px 25px;
+    gap: 30px;
+  }
+} 

@@ -711,13 +711,12 @@ header .logo-w img {
   position: relative;
   max-width: 1250px;
   margin: 0 auto;
-  height: 900px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: white;
+  background-color: rgba(246, 246, 246, 1);
   align-items: center;
-  margin-top: 150px;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -790,22 +789,25 @@ header .logo-w img {
 
 @media (max-width: 767px) {
   .featured-event {
-    height: auto;
-    padding: 20px 15px;
-    margin-top: 80px;
+    height: 300px;
+    padding-bottom: 20px;
+    /* margin-top: 80px; */
+    margin-bottom: 50px;
+    margin-top: -20px;
     gap: 20px;
   }
 
   .featured-event h2 {
     width: 100%;
-    font-size: 24px;
+    font-size: 36px;
     margin-left: 0;
     text-align: left;
+    margin-bottom: 50px;
   }
 
   .featured-event p {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: -20px;
     margin-left: 0;
     text-align: left;
@@ -818,7 +820,7 @@ header .logo-w img {
   }
 
   .featured-event img {
-    height: auto;
+    height: 150px;
     max-height: 300px;
     border-radius: 2px;
   }
@@ -842,7 +844,7 @@ header .logo-w img {
   .featured-event {
     height: auto;
     padding: 30px 25px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     gap: 30px;
   }
 
@@ -920,6 +922,7 @@ header .logo-w img {
   width: 690px;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .section-description {
@@ -990,7 +993,7 @@ header .logo-w img {
 .card:hover .card-image img {
   transform: scale(1.05);
 }
-
+ 
 /* Date Label */
 .card-date {
   width: 200px;
@@ -1336,7 +1339,9 @@ body.ltr {
   }
 
   .hot-deals {
+    margin-top: -150px;
     margin-left: 0;
+    margin-right: 0;
   }
 
   .cards-wrapper {
@@ -1398,6 +1403,7 @@ body.ltr {
     gap: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -100px;
   }
 
   .section-title {
@@ -1420,6 +1426,7 @@ body.ltr {
     color: #555;
     margin-top: 20px;
     margin-bottom: 40px;
+    text-align: left;
   }
 
   .cards-wrapper {
@@ -1428,7 +1435,7 @@ body.ltr {
     gap: 20px;
     justify-content: space-between;
   }
-
+ 
   .card {
     width: 300px;
     height: 446px;
@@ -1503,25 +1510,25 @@ body.ltr {
 @media (min-width: 768px) and (max-width: 1024px) {
   .featured-event {
     width: 700px;
-    height: auto;
-    padding: 30px 25px;
-    margin-top: 100px;
+    height: 450px;
+    padding: 10px 25px;
+    /* margin-top: 100px; */
     gap: 30px;
   }
 
   .featured-event h2 {
     width: 100%;
-    font-size: 28px;
+    font-size: 36px;
     margin-left: 0;
-    text-align: right;
+    text-align: left;
   }
-   
+
   .featured-event p {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: -25px;
     margin-left: 0;
-    text-align: right;
+    text-align: left;
   }
 
   .image-wrapper {
@@ -1553,11 +1560,11 @@ body.ltr {
 
 @media (max-width: 767px) {
   .section-description {
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 30px;
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -1607,7 +1614,7 @@ body.ltr {
 @media (max-width: 768px) {
   #hero {
     height: auto;
-    padding: 278px 26px;
+    padding: 250px 26px;
   }
 
   #hero .carousel-item img {
@@ -1680,4 +1687,12 @@ body.ltr {
   .navbar ul {
     padding-top: 100px;
   }
+}
+
+.edit-div {
+  background-color: rgba(246, 246, 246, 1);
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 180px;
+  padding: 50px;
 }
