@@ -161,13 +161,14 @@
     align-items: center;
     justify-content: flex-start;
   }
-
+ 
   .text-area {
     padding: 0 20px;
     max-width: 100%;
     width: 320px;
 
     text-align: center;
+    margin-top: 100px;
   }
 
   .text-area h2 {
@@ -828,7 +829,7 @@
     margin-left: 10px;
 
   }
-
+  
   .image-wrapper {
     width: 327px;
     height: 250px;

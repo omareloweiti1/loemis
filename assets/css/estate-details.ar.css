@@ -209,6 +209,7 @@ body.ltr {
     font-size: 48px;
     line-height: 120%;
     margin-bottom: 16px;
+    margin-top: 100px;
   }
 
   .text-area p {
@@ -601,7 +602,7 @@ body.rtl .dots {
 /* media */
 @media (max-width: 767px) {
   .experience-slider-section {
-    margin-top: 300px;
+    margin-top: 400px;
     padding: 30px;
   }
 
@@ -728,7 +729,7 @@ body.rtl .dots {
     text-align: center;
     color: #000;
     margin-right: 50px;
-  }
+  } 
 
   .featured-event p {
     width: 343px;
@@ -741,7 +742,7 @@ body.rtl .dots {
     color: #595959;
     margin-right: 50px;
   }
-
+ 
   .image-wrapper {
     width: 327px;
     height: 250px;
