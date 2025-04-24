@@ -253,6 +253,8 @@
     font-size: 48px;
     line-height: 120%;
     margin-bottom: 16px;
+    margin-top: 20px;
+
   }
 
   .text-area p {
@@ -872,6 +874,8 @@
     width: 100%;
     font-size: 36px;
     margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
     text-align: center;
   }
 
@@ -880,6 +884,7 @@
     font-size: 16px;
     margin-top: -25px;
     margin-left: 0;
+    font-weight: 400;
     text-align: center;
   } 
 
@@ -1130,7 +1135,7 @@ padding: 30px;
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .experience-slider-section {
-    margin-top: 250px;
+    margin-top: 350px;
     padding: 40px 24px;
   }
 
@@ -1259,7 +1264,7 @@ padding: 30px;
 
 @media (min-width: 768px) and (max-width: 800px) {
   .experience-slider-section {
-    margin-top: 200px;
+    margin-top: 300px;
     padding: 30px 16px;
   }
 
@@ -1403,7 +1408,7 @@ body.ltr {
     font-size: 14px;
     padding: 10px;
   }
-
+ 
   .card-link {
     margin-bottom: 20px;
     font-size: 14px;
@@ -1639,8 +1644,47 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   .featured-eventee1 {
     width: 700px;
-    height: 600px;
+    height: 550px;
     gap: 30px;
+  }
+  .featured-eventee1 h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+ 
+  .featured-eventee1 p {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 0;
+    font-weight: 400;
+    text-align: center;
+  } 
+  .featured-eventee1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    margin-top: -50px;
+  }
+
+  .featured-eventee1 .blue-box {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: -50px !important;
+    right: 5px;
+    border-radius: 2px;
+    background: rgba(29, 52, 76, 1);
+    z-index: 0;
+
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1649,6 +1693,54 @@ body {
     height: 600px;
     gap: 30px;
   }
+  
+  .featured-event2 h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .featured-event2 p {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-left: 0;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+  } 
+
+  .image-wrapper {
+    width: 600px;
+    height: 350px;
+    position: relative;
+  }
+
+  .featured-event2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .featured-event2 .blue-box {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: 30px;
+    right: -10px;
+    border-radius: 2px;
+    background: rgba(29, 52, 76, 1);
+    z-index: 0;
+    
+  }
 }
  @media (min-width: 768px) and (max-width: 1024px) {
   .featured-event3 {
@@ -1656,22 +1748,194 @@ body {
     height: 600px;
     gap: 30px;
   }
+  .featured-event3 h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .featured-event3 p {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-left: 0;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+  } 
+
+  .image-wrapper {
+    width: 600px;
+    height: 350px;
+    position: relative;
+  }
+
+  .featured-event3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .featured-event3 .blue-box {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: 20px;
+    right: -10px;
+    border-radius: 2px;
+    background: rgba(29, 52, 76, 1);
+    z-index: 0;
+    
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .featured-event4 {
     width: 700px;
-    height: 700px;
+    height: 750px;
     gap: 30px;
+  }
+  .featured-event4 h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .featured-event4 p {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -25px;
+    margin-left: 0;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  } 
+
+  .image-wrapper {
+    width: 600px;
+    height: 350px;
+    position: relative;
+  }
+
+  .featured-event4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    margin-top: -40px;
+  }
+
+  .featured-event4 .blue-box {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: -40px;
+    right: -10px;
+    border-radius: 2px;
+    background: rgba(29, 52, 76, 1);
+    z-index: 0;
+    
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .featured-event5 {
     width: 700px;
-    height: 400px;
+    height: 450px !important;
     gap: 30px;
   }
+  .featured-event5 h2 {
+    width: 100%;
+    font-size: 36px;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .featured-event5 p {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 0;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  } 
+
+  .image-wrapper {
+    width: 600px;
+    height: 350px;
+    position: relative;
+  }
+
+  .featured-event5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 1;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .featured-event5 .blue-box {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: -40px;
+    right: -10px;
+    border-radius: 2px;
+    background: rgba(29, 52, 76, 1);
+    z-index: 0;
+    
+  }
 } 
+
+
+
+@media (max-width: 768px)  {
+  .featured-eventee1 {
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .featured-event2 {
+    height: 650px;
+  }
+}
+@media (max-width: 768px) {
+  .featured-event3 {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-event4 {
+    height: 650px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .featured-event5 {
+    height: 600px;
+  }
+}
+
 
 .card{
   background-color:rgba(246, 246, 246, 1) !important;
