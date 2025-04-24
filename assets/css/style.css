@@ -1328,7 +1328,7 @@ body.ltr {
     max-height: 300px;
     border-radius: 2px;
     width: 110%;
-
+margin-left: 100px;
   }
 
   .blue-box {
@@ -1336,7 +1336,7 @@ body.ltr {
     height: 50px;
     top: 0;
     right: 0;
-    transform: translate(85%, -40%);
+    transform: translate(30%, -40%);
 
   }
 
