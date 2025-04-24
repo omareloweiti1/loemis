@@ -801,6 +801,8 @@
     margin-bottom: 30px;
     margin-top: -50px;
     gap: 20px;
+    width: auto ;
+    margin-left: -50px;
   }
 
   .featured-event h2 {
@@ -841,8 +843,10 @@
     border-radius: 2px;
     z-index: 1;
     position: relative;
-  }
+    width: 110%;
 
+  }
+    
   .blue-box {
     position: absolute;
     width: 30.83px;
@@ -852,6 +856,8 @@
     border-radius: 2px;
     background: rgba(29, 52, 76, 1);
     z-index: 0;
+    transform: translate(130%, -40%);
+
   }
 }
 /* media  ipad  */

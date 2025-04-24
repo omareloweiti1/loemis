@@ -800,6 +800,9 @@ header .logo-w img {
     margin-bottom: 50px;
     margin-top: -20px;
     gap: 20px;
+    width: auto ;
+  margin-left: -50px;
+
   }
 
   .featured-event h2 {
@@ -809,7 +812,7 @@ header .logo-w img {
     text-align: left;
     margin-bottom: 50px;
   }
-
+  
   .featured-event p {
     width: 100%;
     font-size: 16px;
@@ -828,6 +831,7 @@ header .logo-w img {
     height: 150px;
     max-height: 300px;
     border-radius: 2px;
+    width: 110%;
   }
 
   .blue-box {
@@ -835,7 +839,7 @@ header .logo-w img {
     height: 50px;
     top: 0;
     right: 0;
-    transform: translate(25%, -40%);
+    transform: translate(85%, -40%);
   }
 
   .event-link {
@@ -895,7 +899,6 @@ header .logo-w img {
     margin-left: 5px;
   }
 }
- 
 /* End */
 
 /* Start: Hot Deals Section */
