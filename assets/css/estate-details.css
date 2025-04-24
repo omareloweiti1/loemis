@@ -372,6 +372,7 @@
   .navbar {
     padding: 0;
     position: relative;
+    width: 100%;
   }
   .navbar ul {
     margin: 0;
@@ -532,7 +533,7 @@
   }
   .navbar .dropdown .dropdown ul {
     top: 0;
-    left: calc(100% - 30px);
+    /* left: (100calc% - 30px); */
     visibility: hidden;
   }
   .navbar .dropdown .dropdown:hover > ul {
@@ -1436,7 +1437,7 @@ body.ltr {
     border-radius: 2px;
     display: block;
   }
-
+ 
   .card-date {
     width: 344px;
     height: 19px;
@@ -1669,4 +1670,24 @@ body {
 
 .card{
   background-color:rgba(246, 246, 246, 1) !important;
+}
+
+@media (max-width: 1279px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+  }
+
+  .mobile-nav-active .navbar {
+    right: 0;
+    width: 100%;
+
+  }
+
+  
 }

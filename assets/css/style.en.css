@@ -313,7 +313,8 @@ header .logo-w img {
   }
   .navbar .dropdown .dropdown ul {
     top: 0;
-    left: calc(100% - 30px);
+    width: 100% ;
+ 
     visibility: hidden;
   }
   .navbar .dropdown .dropdown:hover > ul {
@@ -342,7 +343,8 @@ header .logo-w img {
     position: fixed;
     top: 0;
     left: -100%;
-    width: calc(100% - 70px);
+    width: 100% ;
+
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
@@ -356,6 +358,8 @@ header .logo-w img {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+    width: 100% ;
+
   }
   .navbar a,
   .navbar a:focus {
