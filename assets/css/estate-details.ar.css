@@ -712,7 +712,8 @@ body.rtl .dots {
 .card-link {
   margin-bottom: 40px;
   font-size: 14px;
-  padding: 5px 10px;
+  margin-top: -5px;
+  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
