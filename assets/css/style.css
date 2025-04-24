@@ -759,6 +759,7 @@ header .logo-w img {
   width: 690px;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-align: right;
 }
 @media (max-width: 767px) {
   .section-description {
@@ -971,12 +972,12 @@ header .logo-w img {
 }
 #footer .logo {
   height: 40px;
-}
+} 
 .social-links a {
-  display: inline-block;
+  display: inline;
   color: rgba(36, 36, 36, 1);
   line-height: 1;
-  padding: 8px 0;
+  padding: 8px ;
   margin-right: 8px;
   border-radius: 50%;
   text-align: center;
@@ -985,6 +986,9 @@ header .logo-w img {
   transition: 0.3s;
   border: 1px solid rgba(36, 36, 36, 1);
 }
+
+
+
 .social-links .youtube img {
   margin-bottom: -5px !important;
 }
@@ -1706,4 +1710,48 @@ body.ltr {
     border-radius: 2px;
     transition: transform 0.3s ease;
   }
+}
+
+/*--------------------------------------------------------------
+# Social Media Links
+--------------------------------------------------------------*/
+.social-links a {
+  display: inline-block;
+  color: rgba(36, 36, 36, 1);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 8px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid rgba(36, 36, 36, 1);
+}
+
+ 
+
+.social-links a:hover {
+  background: #00000035;
+  text-decoration: none;
+}
+.social-links .youtube img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .twitter img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .instagram img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .facebook img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
 }

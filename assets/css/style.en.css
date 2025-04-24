@@ -299,7 +299,7 @@ header .logo-w img {
   }
   .navbar .megamenu ul li {
     flex: 1;
-  }
+  } 
   .navbar .megamenu ul li a,
   .navbar .megamenu ul li:hover > a {
     color: rgba(var(--color-white-rgb), 0.5);
@@ -314,7 +314,7 @@ header .logo-w img {
   .navbar .dropdown .dropdown ul {
     top: 0;
     width: 100% ;
- 
+    
     visibility: hidden;
   }
   .navbar .dropdown .dropdown:hover > ul {

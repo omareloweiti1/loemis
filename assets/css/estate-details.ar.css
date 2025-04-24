@@ -473,7 +473,7 @@ body.rtl .dots {
     margin: 0 auto;
     margin-bottom: 20px;
     direction: rtl;
-  }
+  } 
 
   .section-description {
     font-size: 14px;
@@ -483,9 +483,20 @@ body.rtl .dots {
     margin: 0 auto;
     margin-bottom: 20px;
     direction: rtl;
+    text-align: right;
   }
 }
 
+.section-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #555;
+  width: 690px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: right;
+}
 /*-------------------------------------
 ---------------------------------------------------------------
 # Mobile Navigation
@@ -715,8 +726,8 @@ body.rtl .dots {
 .card-link {
   margin-bottom: 40px;
   font-size: 14px;
-  margin-top: -5px;
-  
+  margin-top: -10px;
+      
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -760,3 +771,48 @@ body.rtl .dots {
     gap: 30px;
   }
 } 
+
+/*--------------------------------------------------------------
+# Social Media Links
+--------------------------------------------------------------*/
+.social-links a {
+  display: inline-block;
+  color: rgba(36, 36, 36, 1);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 8px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid rgba(36, 36, 36, 1);
+}
+
+ 
+
+.social-links a:hover {
+  background: #00000035;
+  text-decoration: none;
+}
+.social-links .youtube img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .twitter img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .instagram img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.social-links .facebook img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+    

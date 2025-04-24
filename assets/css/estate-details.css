@@ -367,7 +367,7 @@
     width: 100px;
   }
 }
-
+   
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
