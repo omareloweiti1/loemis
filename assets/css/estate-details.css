@@ -802,7 +802,6 @@
     margin-top: -50px;
     gap: 20px;
     width: auto ;
-    margin-right: 20px;
   }
 
   .featured-event h2 {
@@ -844,6 +843,7 @@
     z-index: 1;
     position: relative;
     width: 110%;
+    margin-right: 50px;
 
   }
     
