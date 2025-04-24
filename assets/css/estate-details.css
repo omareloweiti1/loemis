@@ -372,7 +372,7 @@
   .navbar {
     padding: 0;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
   }
   .navbar ul {
     margin: 0;
@@ -533,7 +533,7 @@
   }
   .navbar .dropdown .dropdown ul {
     top: 0;
-    /* left: (100calc% - 30px); */
+    /* left: calc(100% - 30px); */
     visibility: hidden;
   }
   .navbar .dropdown .dropdown:hover > ul {
