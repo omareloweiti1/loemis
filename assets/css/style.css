@@ -1290,7 +1290,7 @@ body.ltr {
     display: inline-block;
   }
 }
-
+ 
 @media (max-width: 767px) {
   .featured-event {
     height: 300px;
@@ -1697,6 +1697,31 @@ margin-left: 100px;
     margin-top: 0 !important;
   }
 }
+  
+
+@media (max-width: 1279px) {
+ 
+  .mobile-nav-toggle {
+    display: block !important;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    top: 25px;
+    z-index: 9999;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .sticked .mobile-nav-toggle {
+    top: 25px;
+    color: #000;
+  }
+
+} 
+
 
 @media (min-width: 280px) and (max-width: 414px) {
   .card-image img {
@@ -1760,3 +1785,5 @@ margin-left: 100px;
   margin: 0 auto;
   margin-top: 3px;
 }
+
+

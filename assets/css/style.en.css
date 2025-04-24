@@ -407,11 +407,14 @@ header .logo-w img {
     line-height: 0;
     transition: 0.5s;
     position: fixed;
-    top: 20px;
+    top: 10px;
     z-index: 9999;
     right: 20px;
+    justify-content: center;
+    align-items: center;
   }
   .sticked .mobile-nav-toggle {
+    top: 15px;
     color: #000;
   }
   .mobile-nav-toggle.bi-x {
