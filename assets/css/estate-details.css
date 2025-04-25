@@ -656,7 +656,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .featured-event h2 {
@@ -838,7 +838,7 @@
   .image-wrapper {
     width: 400px;
     height: 250px;
-    position: relative;
+    /* position: relative; */
   }
 
   .featured-event img {
@@ -1940,6 +1940,7 @@ body {
 @media (max-width: 767px) {
   .featured-event {
     height: auto;
+    position: relative;
   }
   .featured-event h2 {
     width: 100%;
@@ -1961,6 +1962,10 @@ body {
     text-align: center;
     margin-bottom: 10px;
     height: auto;
+  }
+  .image-wrapper {
+      width: 300px;
+    height: 250px;
   }
   .featured-eventee1 .blue-box {
     position: absolute;
