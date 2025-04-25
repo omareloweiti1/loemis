@@ -387,7 +387,7 @@ header .logo-w img {
     font-weight: 700;
   }
   .navbar .dropdown ul,
-  .navbar .dropdown .dropdown ul {
+  .navbar .dropdown .dropdown ul  {
     position: static;
     display: none;
     padding: 10px 0;
@@ -773,8 +773,8 @@ header .logo-w img {
   position: absolute;
   width: 100px;
   height: 70px;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   transform: translate(50%, -50%);
   border-radius: 2px;
   background: rgba(29, 52, 76, 1);
@@ -824,7 +824,7 @@ header .logo-w img {
     text-align: left;
     margin-left: 5px;
   }
-   
+
   .image-wrapper {
     width: 100%;
     height: auto;
@@ -1083,7 +1083,7 @@ header .logo-w img {
 .newsletter-title {
   font-weight: 600;
   font-size: 36px;
-  line-height: 100%;
+  line-height: 120%;
   color: white;
   margin: 0;
 }
@@ -1092,7 +1092,7 @@ header .logo-w img {
 .newsletter-desc {
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 150%;
   color: white;
   margin: 0;
 }
@@ -1699,11 +1699,22 @@ body.ltr {
     padding-top: 100px;
   }
 }
-
+   
 .edit-div {
   background-color: rgba(246, 246, 246, 1);
   width: 100%;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 180px;
   padding: 50px;
 }
+
+
+/* إخفاء العناصر في الشاشات التي عرضها أكبر من أو يساوي 1080px */
+@media (max-width: 1080px) {
+  .reque {
+    display: none ;
+  }
+}
+
+ 
+   

@@ -717,6 +717,19 @@ header .logo-w img {
   z-index: 0;
 }
 
+/* .blue-box {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  top: 0;
+  left: 0;  
+  transform: translate(-1150%, -50%);  
+  border-radius: 2px;
+  background: rgba(29, 52, 76, 1);
+  z-index: 0;
+} */
+
+
 .event-link {
   width: 141px;
   height: 19px;
@@ -939,7 +952,7 @@ header .logo-w img {
 .newsletter-title {
   font-weight: 600;
   font-size: 36px;
-  line-height: 100%;
+  line-height: 120%;
   color: white;
   margin: 0;
 }
@@ -948,7 +961,7 @@ header .logo-w img {
 .newsletter-desc {
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 150%;
   color: white;
   margin: 0;
 }
@@ -1375,12 +1388,13 @@ margin-left: 100px;
     width: 100%;
     height: auto;
   }
-
+   
   .featured-event img {
     height: auto;
     max-height: 400px;
     border-radius: 2px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+
   }
 
   .blue-box {
@@ -1788,3 +1802,8 @@ margin-left: 100px;
 }
 
 
+@media (max-width: 1080px) {
+  .reque {
+    display: none ;
+  }
+}
