@@ -643,7 +643,7 @@ header .logo-w img {
   justify-content: center;
   gap: 48px;
   background-color: white;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .logo-section img {
   max-height: 100%;
@@ -1378,7 +1378,7 @@ margin-left: 100px;
   .featured-event p {
     width: 100%;
     font-size: 16px;
-    margin-top: -40px;
+    margin-top: -20px;
     text-align: right;
     margin-right: 20px;
 
