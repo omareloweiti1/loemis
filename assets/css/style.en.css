@@ -993,7 +993,7 @@ header .logo-w img {
 }
 @media (min-width: 415px) and (max-width: 440px) {
   .card-image img {
-    width: 390px;
+    width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 2px;
