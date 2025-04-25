@@ -620,7 +620,7 @@ body.rtl .dots {
 /* media */
 @media (max-width: 767px) {
   .experience-slider-section {
-    margin-top: 300px;
+    margin-top: 400px;
     padding: 30px;
   }
 
